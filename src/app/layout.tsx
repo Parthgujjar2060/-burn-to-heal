@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <body>
-        <header>
+        <header className=" bg-red-900">
           <Header />
         </header>
         <main>{children}</main>
