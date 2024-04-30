@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body>
-        <header className=" bg-red-900">
+       <body className="bg-[#081B29]  min-h-screen">
+        <header>
           <Header />
         </header>
         <main>{children}</main>
