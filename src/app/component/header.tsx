@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       </div>
       <ul className="flex space-x-7">
         {links.map((link) => (
-          <li key={link} className="p-3">
+          <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500">
             <Link href={`/${link.toLowerCase()}`}>
               {link}
             </Link>
