@@ -4,18 +4,18 @@ import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 9
 interface HomeData {
-    logo: string;
     image: string;
     name: string;
     linkdin: string;
     github: string;
     insta: string;
+    logo: string;
 }
 
 const Home: React.FC = () => {
     const [homeData, setHomeData] = useState<HomeData | null>(null);
     const [links, setLinks] = useState<HomeData | null>(null);
-    const [logo, setLogo] = useState<HomeData | null>(null);
+    const [logo, setLogo] = useState<{ [key: string]: HomeData } | null>(null);
 
     useEffect(() => {
         const homeRef = ref(database, 'home');
@@ -89,18 +89,30 @@ const Home: React.FC = () => {
                     )}
                 </div>
             </div>
-            <div className="flex flex-col items-center mt-10">
+
+            <div className="flex flex-col items-center justify-center h-screen mr-10">
                 {links && Object.entries(links).map(([platform, url]) => (
                     <div key={platform} className="mt-2">
-                        <a href={url} target="_blank" rel="noopener noreferrer">
-                            <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer" />
+                        <a href={url} target="_blank">
+                        <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
                         </a>
                     </div>
                 ))}
             </div>
 
+            <div className="flex justify-center space-x-4 mt-10">
+                {logo &&
+                    Object.keys(logo).map((key) => {
+                        const logoData = logo[key] as HomeData;
+                        return (
+                            <a key={key} href={logoData.logo} target="_blank">
+                                <img src={logoData.logo} alt={`Icon ${key}`} className="w-10 h-10 hover:opacity-80 cursor-pointer" />
+                            </a>
+                        );
+                    })
+                }
+            </div>
 
-            {/* Animation styles */}
             <style>{`
                 @keyframes reveal {
                     0% {
