@@ -43,11 +43,11 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 h-13">
+    <nav className="flex justify-between items-center px-10 py-5 h-13">
       <div>
-        <img src={headerData?.logo} alt="icon" className="w-10 h-10" />
+        <img src={headerData?.logo} alt="icon" className="w-10 h-10 ml-40"/>
       </div>
-      <ul className="flex space-x-7">
+      <ul className="flex space-x-8 mr-20">
         {links.map((link) => (
           <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500">
             <Link href={`/${link.toLowerCase()}`}>
