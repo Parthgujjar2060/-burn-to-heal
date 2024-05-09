@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Link from 'next/link';
@@ -12,19 +12,6 @@ interface HomeData {
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
@@ -44,10 +31,11 @@ const Header: React.FC = () => {
 
   return (
     <nav className="flex justify-between items-center px-10 py-5 h-13">
-      <div>
-        <img src={headerData?.logo} alt="icon" className="w-10 h-10 ml-40"/>
+      <div style={{ marginLeft: '8%' }}>
+        <img src={headerData?.logo} alt="icon" className="w-10 h-10" />
       </div>
-      <ul className="flex space-x-8 mr-20">
+
+      <ul className="flex justify-center space-x-8">
         {links.map((link) => (
           <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500">
             <Link href={`/${link.toLowerCase()}`}>
