@@ -35,9 +35,9 @@ const Header: React.FC = () => {
         <img src={headerData?.logo} alt="icon" className="w-10 h-10" />
       </div>
 
-      <ul className="flex justify-center space-x-8">
+      <ul className="flex justify-center space-x-8" style={{ margin: '0 auto' }}>
         {links.map((link) => (
-          <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500">
+          <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500 ">
             <Link href={`/${link.toLowerCase()}`}>
               {link}
             </Link>
@@ -45,6 +45,7 @@ const Header: React.FC = () => {
         ))}
       </ul>
     </nav>
+
   );
 }
 
