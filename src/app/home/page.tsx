@@ -100,13 +100,12 @@ const Home: React.FC = () => {
                         </div>
                     ))}
                 </div>
-    
-                {/* Logos positioned at specific coordinates */}
+ 
                 {logo && Object.keys(logo).map((key, index) => {
                     const logoData = logo[key] as HomeData;
-                    const position = getSpecificPosition(index); // Get specific position for each logo
+                    const position = getSpecificPosition(index); 
                     return (
-                        <a key={key} href={logoData.logo} target="_blank" className="logo" style={{ left: position.left, top: position.top }}>
+                        <a key={key} target="_blank" className="logo" style={{ left: position.left, top: position.top }}>
                             <img src={logoData.logo} alt={`Icon ${key}`} />
                         </a>
                     );
@@ -150,21 +149,21 @@ const Home: React.FC = () => {
 
         switch (index) {
             case 0:
-                return { left: '100px', top: '50px' };
+                return { left: '200px', top: '50px' };
             case 1:
-                return { left: '200px', top: '100px' };
+                return { left: '300px', top: '250px' };
             case 2:
-                return { left: '300px', top: '150px' };
+                return { left: '200px', top: '450px' };
             case 3:
-                return { left: '400px', top: '200px' };
+                return { left: '400px', top: '50px' };
             case 4:
-                return { left: '500px', top: '250px' };
+                return { left: '600px', top: '250px' };
             case 5:
-                return { left: '600px', top: '300px' };
+                return { left: '400px', top: '450px' };
             case 6:
-                return { left: '800px', top: '400px' };
+                return { left: '650px', top: '450px' };
             case 7:
-                return { left: '1000px', top: '450px' };
+                return { left: '650px', top: '50px' };
             default:
                 return { left: '0', top: '0' }; 
         }
