@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 
+
 interface HomeData {
     image: string;
     name: string;
@@ -62,11 +63,10 @@ const Home: React.FC = () => {
     return (
         <div className="home-container">
             <div className="flex items-center pb-28 h-screen">
-                <div className="grid grid-cols-2 gap-4 w-full ml-10  mr-0">
+                <div className="grid grid-cols-2 gap-4 w-full ml-10">
                     <div className='flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
                         <div className="mr-64">
-                            <h2 className="text-white font-serif text-1xl">Hello, I am Parth Called</h2>
-                            <h1 className="text-3xl text-white font-bold p-1">Arjun</h1>
+                            <h2 className="text-white font-serif text-1xl ">Hello, I am Parth Called</h2>
                         </div>
                         <div className="flex justify-center m-5">
                             <p className="flex space-x-1 overflow-hidden animate-pulse">
@@ -79,31 +79,30 @@ const Home: React.FC = () => {
                                 ))}
                             </p>
                         </div>
+                        <div className="flex max-w-max mr-10 gap-4">
+                            {links && Object.entries(links).map(([platform, url]) => (
+                                <div key={platform} className="mt-2">
+                                    <a href={url} target="_blank">
+                                        <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className="flex justify-center items-center">
                         {homeData && (
-                            <div className="flex justify-center items-center mr-28" style={{ width: '50%', height: '100%' }}>
-                                <div style={{ width: '100%', height: '100%', borderRadius: '0.5rem', overflow: 'hidden' }}>
-                                    <img className='w-full h-full object-cover' src={homeData.image} alt="name is empty" />
+                            <div className="flex justify-center items-center" style={{ width: '50%', height: '100%' }}>
+                                <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: "3px solid " }}>
+                                    <img className="" src={homeData.image} alt="name is empty" />
                                 </div>
                             </div>
                         )}
                     </div>
                 </div>
-    
-                <div className="flex flex-col justify-center max-w-max mr-10 ">
-                    {links && Object.entries(links).map(([platform, url]) => (
-                        <div key={platform} className="mt-2">
-                            <a href={url} target="_blank">
-                                <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
-                            </a>
-                        </div>
-                    ))}
-                </div>
- 
+
                 {logo && Object.keys(logo).map((key, index) => {
                     const logoData = logo[key] as HomeData;
-                    const position = getSpecificPosition(index); 
+                    const position = getSpecificPosition(index);
                     return (
                         <a key={key} target="_blank" className="logo" style={{ left: position.left, top: position.top }}>
                             <img src={logoData.logo} alt={`Icon ${key}`} />
@@ -111,7 +110,7 @@ const Home: React.FC = () => {
                     );
                 })}
             </div>
-    
+
             <style>{`
                 .home-container {
                     position: relative;
@@ -164,8 +163,10 @@ const Home: React.FC = () => {
                 return { left: '650px', top: '450px' };
             case 7:
                 return { left: '650px', top: '50px' };
+                case 8:
+                return { left: '1200px'};
             default:
-                return { left: '0', top: '0' }; 
+                return { left: '0', top: '0' };
         }
     }
 };
