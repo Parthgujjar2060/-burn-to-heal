@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Link from 'next/link';
+import Contact from '../contact/page';
 
 const links = ["Home", "About", "Avocations", "Contact"];
 
@@ -44,6 +45,12 @@ const Header: React.FC = () => {
           </li>
         ))}
       </ul>
+
+      <div>
+        <Link href="/contact">
+        <button className=" p-1 bg-blue-500 font" style={{border: "1px solid", borderRadius: "15%"}}>Let's talk</button>
+        </Link>
+      </div>
     </nav>
 
   );
