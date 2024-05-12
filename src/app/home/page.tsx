@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
-
+import Link from 'next/link';
+import '../home/home.css';
 
 interface HomeData {
     image: string;
@@ -64,11 +65,11 @@ const Home: React.FC = () => {
         <div className="home-container">
             <div className="flex items-center pb-28 h-screen">
                 <div className="grid grid-cols-2 gap-4 w-full ml-10">
-                    <div className='flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
-                        <div className="mr-64">
-                            <h2 className="text-white font-serif text-1xl ">Hello, I am Parth Called</h2>
+                    <div className='main-container flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
+                        <div className=" font-container mr-60">
+                            <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
-                        <div className="flex justify-center m-5">
+                        <div className="flex m-5">
                             <p className="flex space-x-1 overflow-hidden animate-pulse">
                                 {Array.from("a Full Stack Developer").map((char, i) => (
                                     <span
@@ -79,21 +80,35 @@ const Home: React.FC = () => {
                                 ))}
                             </p>
                         </div>
-                        <div className="flex max-w-max mr-10 gap-4">
-                            {links && Object.entries(links).map(([platform, url]) => (
-                                <div key={platform} className="mt-2">
-                                    <a href={url} target="_blank">
-                                        <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
-                                    </a>
-                                </div>
-                            ))}
+
+                        <div>
+                            <p className=" w-96" style={{ width: "410px" }}>
+                                Full-Stack Developer with ability to learn and collaborate
+                                in rapidly changing enviroments and compositions.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-2 gap-40">
+                            <div className="">
+                                <Link href="/contact">
+                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
+                                </Link>
+                            </div>
+                            <div className="flex gap-2">
+                                {links && Object.entries(links).map(([platform, url]) => (
+                                    <div key={platform} className="">
+                                        <a href={url} target="_blank">
+                                            <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className="flex justify-center items-center">
                         {homeData && (
                             <div className="flex justify-center items-center" style={{ width: '50%', height: '100%' }}>
-                                <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: "3px solid " }}>
-                                    <img className="" src={homeData.image} alt="name is empty" />
+                                <div className="w-full h-full border-3 border-blue-500 overflow-hidden" style={{ borderRadius: '50%' }}>
+                                    <img className="" src={homeData.image} alt="name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
                             </div>
                         )}
@@ -118,8 +133,7 @@ const Home: React.FC = () => {
     
                 .logo {
                     position: absolute;
-                    opacity: 0.4; /* Adjust opacity as needed */
-                    /* Add any additional styling for logos here */
+                    opacity: 0.4;  
                 }
     
                 @keyframes reveal {
@@ -163,8 +177,8 @@ const Home: React.FC = () => {
                 return { left: '650px', top: '450px' };
             case 7:
                 return { left: '650px', top: '50px' };
-                case 8:
-                return { left: '1200px'};
+            case 8:
+                return { left: '1320px' };
             default:
                 return { left: '0', top: '0' };
         }
