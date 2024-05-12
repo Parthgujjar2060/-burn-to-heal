@@ -4,6 +4,7 @@ import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Link from 'next/link';
 import Contact from '../contact/page';
+import { link } from 'fs';
 
 const links = ["Home", "About", "Avocations", "Contact"];
 
@@ -13,6 +14,7 @@ interface HomeData {
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
+
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
@@ -48,11 +50,10 @@ const Header: React.FC = () => {
 
       <div>
         <Link href="/contact">
-        <button className=" p-1 bg-blue-500 font" style={{border: "1px solid", borderRadius: "15%"}}>Let's talk</button>
+          <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
         </Link>
       </div>
     </nav>
-
   );
 }
 
