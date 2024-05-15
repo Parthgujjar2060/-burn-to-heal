@@ -3,8 +3,6 @@ import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Link from 'next/link';
-import Contact from '../contact/page';
-import { link } from 'fs';
 
 const links = ["Home", "About", "Avocations", "Contact"];
 
