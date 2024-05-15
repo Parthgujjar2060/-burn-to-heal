@@ -62,11 +62,11 @@ const Home: React.FC = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="">
             <div className="flex items-center pb-28 h-screen">
-                <div className="grid grid-cols-2 gap-4 w-full ml-10">
-                    <div className='main-container flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
-                        <div className=" font-container mr-60">
+                <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
+                    <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
+                        <div className=" mr-60">
                             <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
                         <div className="flex m-5">
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
                                 in rapidly changing enviroments and compositions.
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 mt-5" style={{gap : "140px"}}>
+                        <div className="grid grid-cols-2 mt-5" style={{ gap: "140px" }}>
                             <div className="">
                                 <Link href="/contact">
                                     <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
@@ -114,16 +114,17 @@ const Home: React.FC = () => {
                         )}
                     </div>
                 </div>
-
                 {logo && Object.keys(logo).map((key, index) => {
                     const logoData = logo[key] as HomeData;
                     const position = getSpecificPosition(index);
+                    const logoClassName = `logo-${index}`;
                     return (
-                        <a key={key} target="_blank" className="logo" style={{ left: position.left, top: position.top }}>
+                        <a key={key} target="_blank" className={`logo ${logoClassName}`} style={{ left: position.left, top: position.top }}>
                             <img src={logoData.logo} alt={`Icon ${key}`} />
                         </a>
                     );
                 })}
+
             </div>
 
             <style>{`
