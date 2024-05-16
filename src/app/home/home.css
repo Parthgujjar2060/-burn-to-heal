@@ -53,16 +53,10 @@
         width: 50%;
     }
 
-    .logo-0 {
-        left: 100px;
-        top: 50px;
+    .devimage-container {
+        display: flex;
+        direction: column;
     }
-
-    .logo-1 {
-        left: 200px;
-        top: 150px;
-    }
-
 }
 
 
