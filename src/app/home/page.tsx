@@ -12,17 +12,20 @@ interface HomeData {
     github: string;
     insta: string;
     logo: string;
+    imageDev: string;
 }
 
 const Home: React.FC = () => {
     const [homeData, setHomeData] = useState<HomeData | null>(null);
     const [links, setLinks] = useState<HomeData | null>(null);
     const [logo, setLogo] = useState<{ [key: string]: HomeData } | null>(null);
+    const [imageDev, setImageDev] = useState<HomeData | null>(null);
 
     useEffect(() => {
         const homeRef = ref(database, 'home');
         const linkRef = ref(database, 'home/links');
         const logoRef = ref(database, 'home/icon');
+        const imageRef = ref(database, 'home/imageDev');
 
         get(homeRef)
             .then((snapshot) => {
@@ -59,6 +62,20 @@ const Home: React.FC = () => {
             .catch((error) => {
                 console.error("Error fetching logo data: ", error);
             });
+
+        get(imageRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    setImageDev(snapshot.val());
+                } else {
+                    console.log("No image data available");
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching image data: ", error);
+            });
+
+
     }, []);
 
     return (
@@ -66,7 +83,7 @@ const Home: React.FC = () => {
             <div className="flex items-center pb-28 h-screen">
                 <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
                     <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
-                        <div className=" mr-60">
+                        <div className="mr-60">
                             <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
                         <div className="flex m-5">
@@ -108,11 +125,20 @@ const Home: React.FC = () => {
                         {homeData && (
                             <div className="flex justify-center items-center" style={{ width: '50%', height: '100%' }}>
                                 <div className="w-full h-full border-3 border-blue-500 overflow-hidden" style={{ borderRadius: '50%' }}>
-                                    <img className="" src={homeData.image} alt="name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img className="" src={homeData.image} alt="Name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
                             </div>
                         )}
                     </div>
+                </div>
+                <div className="flex justify-center items-center w-24">
+                    {homeData && (
+                        <div className="devimage-container" >
+                            <div className="">
+                                <img className="" src={homeData.imageDev} alt="Developer image" />
+                            </div>
+                        </div>
+                    )}
                 </div>
                 {logo && Object.keys(logo).map((key, index) => {
                     const logoData = logo[key] as HomeData;
@@ -131,10 +157,17 @@ const Home: React.FC = () => {
                 .home-container {
                     position: relative;
                 }
+
+                .logo{
+                    position: absolute;
+                    opacity: 0.4;
+                    z-index: -1;
+                }
     
                 .logo {
                     position: absolute;
-                    opacity: 0.4;  
+                    opacity: 0.4; 
+ 
                 }
     
                 @keyframes reveal {
@@ -163,23 +196,21 @@ const Home: React.FC = () => {
 
         switch (index) {
             case 0:
-                return { left: '200px', top: '50px' };
+                return { left: '200px', top: '150px' };  // first line 1st image 
             case 1:
-                return { left: '300px', top: '250px' };
+                return { left: '300px', top: '325px' };  // second line 1st image
             case 2:
-                return { left: '200px', top: '450px' };
+                return { left: '200px', top: '500px' };  // third line 1st image
             case 3:
-                return { left: '400px', top: '50px' };
+                return { left: '430px', top: '150px' };  // first line 2nd image
             case 4:
-                return { left: '600px', top: '250px' };
+                return { left: '600px', top: '325px' };  // second line 2nd image
             case 5:
-                return { left: '400px', top: '450px' };
+                return { left: '430px', top: '500px' };  // third line 2nd image
             case 6:
-                return { left: '650px', top: '450px' };
+                return { left: '700px', top: '500px' };  // third line 3rd image
             case 7:
-                return { left: '650px', top: '50px' };
-            case 8:
-                return { left: '1320px' };
+                return { left: '700px', top: '150px' };  // first line 3rd image
             default:
                 return { left: '0', top: '0' };
         }
