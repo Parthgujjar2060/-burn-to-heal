@@ -45,7 +45,7 @@ const About = () => {
                             <h2>Other Skills</h2>
                             <ul>
                                 {Object.values(data.skills.otherskills).map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>• {skill}</li>
                                 ))}
                             </ul>
                         </div>
@@ -53,7 +53,7 @@ const About = () => {
                             <h2>Interpersonal Skills</h2>
                             <ul>
                                 {Object.values(data.skills.interpersonalskills).map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>• {skill}</li>
                                 ))}
                             </ul>
                         </div>
@@ -61,7 +61,7 @@ const About = () => {
                             <h2>Professional Skills</h2>
                             <ul>
                                 {Object.values(data.skills.professional).map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>• {skill}</li>
                                 ))}
                             </ul>
                         </div>
@@ -69,7 +69,7 @@ const About = () => {
                             <h2>UI Skills</h2>
                             <ul>
                                 {Object.values(data.skills.ui).map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>• {skill}</li>
                                 ))}
                             </ul>
                         </div>
@@ -77,7 +77,7 @@ const About = () => {
                             <h2>Web Development Skills</h2>
                             <ul>
                                 {Object.values(data.skills.webdev).map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>• {skill}</li>
                                 ))}
                             </ul>
                         </div>
