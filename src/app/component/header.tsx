@@ -12,7 +12,7 @@ interface HomeData {
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
-
+   
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
