@@ -1,1 +1,36 @@
-/* Css goes here */
+.about-container {
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Add padding for some spacing */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.about-content {
+    max-width: 1000px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+@media (min-width: 640px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
