@@ -34,13 +34,13 @@ const About = () => {
     }, []);
 
     return (
-        <div style={{ overflowY: "auto", height: "100vh" }}>
+        <div className="about-container">
             {data && (
-                <div>
-                    <div className="flex" style={{ width: "1000px", margin: "0 auto" }}>
+                <div className="about-content">
+                    <div className="flex-container">
                         <p>{data.paragraph}</p>
                     </div>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 m-5">
+                    <div className="grid-container">
                         <div>
                             <h2>Other Skills</h2>
                             <ul>
@@ -82,19 +82,16 @@ const About = () => {
                             </ul>
                         </div>
                     </div>
+                    <div>
+                        <h3>Achievements</h3>
+                        <p>Your achievements here...</p>
+                    </div>
+                    <div>
+                        <h3>Primary interest</h3>
+                        <p>Your primary interests here...</p>
+                    </div>
                 </div>
             )}
-
-            <div>
-                <div>
-                    <h3>Achievements</h3>
-                    <p>Your achievements here...</p>
-                </div>
-                <div>
-                    <h3>Primary interest</h3>
-                    <p>Your primary interests here...</p>
-                </div>
-            </div>
         </div>
     );
 };
