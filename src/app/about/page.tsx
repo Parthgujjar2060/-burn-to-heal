@@ -14,7 +14,6 @@ interface aboutData {
         webdev: { [key: string]: string };
     };
 }
-
 const About = () => {
     const [data, setData] = useState<aboutData | null>(null);
 
