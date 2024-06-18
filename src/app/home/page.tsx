@@ -74,8 +74,6 @@ const Home: React.FC = () => {
             .catch((error) => {
                 console.error("Error fetching image data: ", error);
             });
-
-
     }, []);
 
     return (
@@ -123,9 +121,9 @@ const Home: React.FC = () => {
                     </div>
                     <div className="flex justify-center items-center">
                         {homeData && (
-                            <div className="flex justify-center items-center" style={{ width: '50%', height: '100%' }}>
+                            <div className="flex justify-center items-center">
                                 <div className="w-full h-full border-3 border-blue-500 overflow-hidden" style={{ borderRadius: '50%' }}>
-                                    <img className="" src={homeData.image} alt="Name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
                             </div>
                         )}
@@ -134,9 +132,7 @@ const Home: React.FC = () => {
                 <div className="flex justify-center items-center w-24">
                     {homeData && (
                         <div className="devimage-container" >
-                            <div className="">
-                                <img className="" src={homeData.imageDev} alt="Developer image" />
-                            </div>
+                            <img className="devimage" src={homeData.imageDev} alt="Developer image" />
                         </div>
                     )}
                 </div>
