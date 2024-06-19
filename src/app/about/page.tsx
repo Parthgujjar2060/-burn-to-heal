@@ -3,6 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import '../about/about.css';
+import Image from 'next/image';
+import other from 'public\other.png';
+import laptop from 'public\laptop.png';
+import person from 'public\person.png';
+import professional from 'public\professional.png';
+import figma from 'public\figma.png';
+import android from 'public\android.png';
 
 interface aboutData {
     paragraph: string;
@@ -37,15 +44,16 @@ const About = () => {
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
-                       <div className="border"> 
-                        <p>{data.paragraph}</p>
+                        <div className="border">
+                            <p>{data.paragraph}</p>
                         </div>
                         <div>
                             <img className="w-64" src="https://via.placeholder.com/150" alt="profile" />
-                         </div>       
+                        </div>
                     </div>
                     <div className="grid-container">
                         <div>
+                        <img src="src\app\assets\other.png" alt="Profile Picture" />
                             <h2>Other Skills</h2>
                             <ul>
                                 {Object.values(data.skills.otherskills).map((skill, index) => (
