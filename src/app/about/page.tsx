@@ -37,7 +37,12 @@ const About = () => {
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
+                       <div className="border"> 
                         <p>{data.paragraph}</p>
+                        </div>
+                        <div>
+                            <img className="w-64" src="https://via.placeholder.com/150" alt="profile" />
+                         </div>       
                     </div>
                     <div className="grid-container">
                         <div>
@@ -91,7 +96,6 @@ const About = () => {
                     </div>
                 </div>
             )}
-            
         </div>
     );
 };
