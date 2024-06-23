@@ -84,7 +84,7 @@ const About = () => {
                     </div>
                     <div className="grid-container">
                         <div>
-                            <div>
+                            <div className="otherDiv">
                                 <div>
                                     {other}
                                 </div>
@@ -95,7 +95,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div>
+                            <div className="otherDiv">
                                 <div>{handsIcon}</div>
                                 <h2>Interpersonal Skills</h2>
                                 <ul>
@@ -104,7 +104,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div>
+                            <div className="otherDiv">
                                 <div>{professionalContent}</div>
                                 <h2>Professional Skills</h2>
                                 <ul>
@@ -113,7 +113,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div>
+                            <div className="otherDiv">
                                 <div>{figmaContent}</div>
                                 <h2>UI Skills</h2>
                                 <ul>
