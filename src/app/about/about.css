@@ -24,6 +24,11 @@
     margin: 20px 0;
 }
 
+.otherDiv{
+    background-color: blue;
+
+}
+
 @media (min-width: 640px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
