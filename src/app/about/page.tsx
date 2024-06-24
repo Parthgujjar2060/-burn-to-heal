@@ -95,7 +95,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="otherDiv">
+                            <div className="interpersonalDiv">
                                 <div>{handsIcon}</div>
                                 <h2>Interpersonal Skills</h2>
                                 <ul>
@@ -104,7 +104,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="otherDiv">
+                            <div className="professionalDiv">
                                 <div>{professionalContent}</div>
                                 <h2>Professional Skills</h2>
                                 <ul>
@@ -113,7 +113,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="otherDiv">
+                            <div className="uiDiv">
                                 <div>{figmaContent}</div>
                                 <h2>UI Skills</h2>
                                 <ul>
@@ -122,7 +122,7 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div>
+                            <div className="webDiv">
                                 <div>{laptopIcon}</div>
                                 <h2>Web Development Skills</h2>
                                 <ul>
@@ -132,7 +132,7 @@ const About = () => {
                                 </ul>
                             </div>
 
-                            <div>
+                            <div className="androidDiv">
                                 <div>{android}</div>
                                 <h2>Android Development</h2>
                                 <ul>
