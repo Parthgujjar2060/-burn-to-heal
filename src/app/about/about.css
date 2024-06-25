@@ -10,17 +10,22 @@
     margin: 0 auto;
 }
 
+/* 
 .flex-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
+} */
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 20px;
     margin: 20px 0;
+}
+.grid-item {
+    flex: 1;
 }
 
 .otherDiv,
