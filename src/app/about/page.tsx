@@ -52,7 +52,6 @@ const handsIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 84.429 79.798">
         <path id="hands-helping" data-name="Icon awesome-hands-helping" d="M64.378,29.925H44.326v8.729c0,6.188-4.261,11.223-9.5,11.223s-9.5-5.035-9.5-11.223V19.7l-8.562,6.079a10.434,10.434,0,0,0-4.1,8.542v7.373l-10.554,7.2A5.494,5.494,0,0,0,.569,55.706l10.554,21.6c1.161,2.385,3.747,3.2,5.765,1.824l13.64-9.305h18.02c4.657,0,8.443-4.473,8.443-9.976H59.1c2.335,0,4.221-2.229,4.221-4.988V44.888h1.055a3.481,3.481,0,0,0,3.166-3.741V33.666A3.481,3.481,0,0,0,64.378,29.925ZM83.863,24.1,73.309,2.492C72.148.107,69.563-.7,67.544.668L53.9,9.974H40.422a7.569,7.569,0,0,0-4.472,1.512L31.53,14.743a5.215,5.215,0,0,0-1.979,4.224V38.654c0,3.445,2.361,6.235,5.277,6.235S40.1,42.1,40.1,38.654V24.937H64.378c4.076,0,7.387,3.912,7.387,8.729v4.442l10.554-7.2A5.515,5.515,0,0,0,83.863,24.1Z" transform="translate(0.002 -0.001)" fill="#081b29" />
     </svg>
-
 );
 
 const About = () => {
@@ -83,11 +82,9 @@ const About = () => {
                         </div>
                     </div>
                     <div className="grid-container">
-                        <div>
+                        <div className="grid-item">
                             <div className="otherDiv">
-                                <div>
-                                    {other}
-                                </div>
+                                <div>{other}</div>
                                 <h2>Other Skills</h2>
                                 <ul>
                                     {Object.values(data.skills.otherskills).map((skill, index) => (
@@ -95,6 +92,8 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="grid-item">
                             <div className="interpersonalDiv">
                                 <div>{handsIcon}</div>
                                 <h2>Interpersonal Skills</h2>
@@ -104,6 +103,8 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="grid-item">
                             <div className="professionalDiv">
                                 <div>{professionalContent}</div>
                                 <h2>Professional Skills</h2>
@@ -113,6 +114,8 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="grid-item">
                             <div className="uiDiv">
                                 <div>{figmaContent}</div>
                                 <h2>UI Skills</h2>
@@ -122,6 +125,8 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+                        <div className="grid-item">
                             <div className="webDiv">
                                 <div>{laptopIcon}</div>
                                 <h2>Web Development Skills</h2>
@@ -131,7 +136,8 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-
+                        </div>
+                        <div className="grid-item">
                             <div className="androidDiv">
                                 <div>{android}</div>
                                 <h2>Android Development</h2>
@@ -141,20 +147,21 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
-
-                        </div>
-                        <div>
-                            <h3>Achievements</h3>
-                            <p>Your achievements here...</p>
-                        </div>
-                        <div>
-                            <h3>Primary interest</h3>
-                            <p>Your primary interests here...</p>
                         </div>
                     </div>
+        
                 </div>
             )}
+               <div className="achievements">
+                        <h3>Achievements</h3>
+                        <p>Your achievements here...</p>
+                    </div>
+                    <div className="primary-interest">
+                        <h3>Primary interest</h3>
+                        <p>Your primary interests here...</p>
+                    </div>
         </div>
+        
     );
 };
 
