@@ -10,22 +10,23 @@
     margin: 0 auto;
 }
 
-/* 
-.flex-container {
+.grid-container {
+    margin: 50px auto; 
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+}
+
+.grid-item {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-} */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    margin: 20px 0;
+    align-items: center;
 }
-.grid-item {
-    flex: 1;
+
+.skills{
+    margin: 0 auto;
+
 }
 
 .otherDiv,
@@ -34,16 +35,21 @@
 .uiDiv,
 .webDiv,
 .androidDiv {
-    background-color: blue;
+    background-color: #00ABF0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
+
 /* Medium screens: 2 columns */
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        width: 300px;
     }
 }
 
@@ -51,6 +57,7 @@
 @media (min-width: 1024px) {
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;
+        width: 300px;
     }
 }
 
@@ -59,13 +66,8 @@
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
-    }
-
-    .skills-container {
-        grid-column: span 3;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        width: max-content;
+        width: 300px;
     }
 
     .achievements,
