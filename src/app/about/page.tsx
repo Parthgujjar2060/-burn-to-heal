@@ -85,8 +85,8 @@ const About = () => {
                         <div className="grid-item">
                             <div className="otherDiv">
                                 <div>{other}</div>
-                                <h2>Other Skills</h2>
-                                <ul>
+                                <h2 className="">Other Skills</h2>
+                                <ul className='skills'>
                                     {Object.values(data.skills.otherskills).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
@@ -97,7 +97,7 @@ const About = () => {
                             <div className="interpersonalDiv">
                                 <div>{handsIcon}</div>
                                 <h2>Interpersonal Skills</h2>
-                                <ul>
+                                <ul className='skills'>
                                     {Object.values(data.skills.interpersonalskills).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
@@ -108,7 +108,7 @@ const About = () => {
                             <div className="professionalDiv">
                                 <div>{professionalContent}</div>
                                 <h2>Professional Skills</h2>
-                                <ul>
+                                <ul className='skills'>
                                     {Object.values(data.skills.professional).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
@@ -119,7 +119,7 @@ const About = () => {
                             <div className="uiDiv">
                                 <div>{figmaContent}</div>
                                 <h2>UI Skills</h2>
-                                <ul>
+                                <ul className='skills'>
                                     {Object.values(data.skills.ui).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
@@ -130,7 +130,7 @@ const About = () => {
                             <div className="webDiv">
                                 <div>{laptopIcon}</div>
                                 <h2>Web Development Skills</h2>
-                                <ul>
+                                <ul className='skills'>
                                     {Object.values(data.skills.webdev).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
@@ -141,7 +141,7 @@ const About = () => {
                             <div className="androidDiv">
                                 <div>{android}</div>
                                 <h2>Android Development</h2>
-                                <ul>
+                                <ul className='skills'>
                                     {Object.values(data.skills.android).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
                                     ))}
