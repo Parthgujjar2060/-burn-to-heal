@@ -28,17 +28,47 @@
     animation: reveal 3s infinite;
 }
 
+@media (max-width: 953px) {
+    .devimage {
+        display: none;
+    }
 
-@media (max-width: 1024px) {}
+    .name {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .parthimage {
+        width: 80%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: grid;
+        gap: 50px;
+    }
+}
 
 @media (max-width: 768px) {
+    .devimage {
+        display: none;
+    }
+
     .main-container {
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
-        grid-row-gap: 100px;
-        margin-top: -100px;
-        margin-right: 48px;
+        grid-row-gap: 70px;
+        margin-top: 50px;
+        margin-right: 0px;
+        margin-left: 85px;
     }
 
     .main-container> :first-child {
@@ -49,15 +79,78 @@
         grid-row: 1;
     }
 
+    .name {
+        width: 40%;
+        margin: 0 auto 10px;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto 10px;
+    }
+
     .logo img {
         width: 50%;
     }
 
+    .parthimage {
+        width: 75%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+    }
+
     .devimage-container {
         display: flex;
-        direction: column;
+        flex-direction: column;
+    }
+
+    .logo {
+        position: absolute;
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    .logo-0 {
+        left: 100px !important;
+        top: 120px !important;
+    }
+
+    .logo-1 {
+        left: 200px !important;
+        top: 200px !important;
+    }
+
+    .logo-2 {
+        left: 100px !important;
+        top: 300px !important;
+    }
+
+    .logo-3 {
+        left: 200px !important;
+        top: 400px !important;
+    }
+
+    .logo-4 {
+        left: 100px !important;
+        top: 500px !important;
+    }
+
+    .logo-5 {
+        left: 200px !important;
+        top: 600px !important;
+    }
+
+    .logo-6 {
+        left: 100px !important;
+        top: 700px !important;
+    }
+
+    .logo-7 {
+        left: 100px !important;
+        top: 800px !important;
     }
 }
 
-
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    /* Add styles for screens smaller than 480px here if needed */
+}
