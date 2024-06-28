@@ -84,6 +84,7 @@ const About = () => {
                     <div className="grid-container">
                         <div className="grid-item">
                             <div className="otherDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{other}</div>
                                 <h2 className="">Other Skills</h2>
                                 <ul className='skills'>
@@ -95,6 +96,7 @@ const About = () => {
                         </div>
                         <div className="grid-item">
                             <div className="interpersonalDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{handsIcon}</div>
                                 <h2>Interpersonal Skills</h2>
                                 <ul className='skills'>
@@ -106,6 +108,7 @@ const About = () => {
                         </div>
                         <div className="grid-item">
                             <div className="professionalDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{professionalContent}</div>
                                 <h2>Professional Skills</h2>
                                 <ul className='skills'>
@@ -117,6 +120,7 @@ const About = () => {
                         </div>
                         <div className="grid-item">
                             <div className="uiDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{figmaContent}</div>
                                 <h2>UI Skills</h2>
                                 <ul className='skills'>
@@ -128,6 +132,7 @@ const About = () => {
                         </div>
                         <div className="grid-item">
                             <div className="webDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{laptopIcon}</div>
                                 <h2>Web Development Skills</h2>
                                 <ul className='skills'>
@@ -139,6 +144,7 @@ const About = () => {
                         </div>
                         <div className="grid-item">
                             <div className="androidDiv">
+                                <div className="backgroundcard"></div>
                                 <div>{android}</div>
                                 <h2>Android Development</h2>
                                 <ul className='skills'>
@@ -149,19 +155,11 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-        
                 </div>
             )}
-               <div className="achievements">
-                        <h3>Achievements</h3>
-                        <p>Your achievements here...</p>
-                    </div>
-                    <div className="primary-interest">
-                        <h3>Primary interest</h3>
-                        <p>Your primary interests here...</p>
-                    </div>
+
         </div>
-        
+
     );
 };
 
