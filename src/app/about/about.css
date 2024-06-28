@@ -11,22 +11,22 @@
 }
 
 .grid-container {
-    margin: 50px auto; 
-    width: 800px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
+    gap: 20px; /* Adjust gap between grid items */
 }
 
 .grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Ensure items are positioned relative for z-index */
 }
 
-.skills{
-    margin: 0 auto;
 
+.skills {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
 }
 
 .otherDiv,
@@ -41,37 +41,86 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* .otherDiv:hover,
+.interpersonalDiv:hover,
+.professionalDiv:hover,
+.uiDiv:hover,
+.webDiv:hover,
+.androidDiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.backgroundcard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push background behind main content */
+    transform: rotate(0deg); /* Initial no rotation */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+
+    /* Additional styling properties as needed */
+    background-color: #f0f0f0; /* Example background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rotate anticlockwise on hover */
+.grid-item:hover .backgroundcard {
+    transform: rotate(-30deg); /* Adjust the degree of rotation as desired */
+}
+
+
+h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+svg {
+    margin-bottom: 15px;
+}
 
 /* Medium screens: 2 columns */
 @media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr;
-        width: 300px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Large screens: 3 columns */
 @media (min-width: 1024px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 300px;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Extra large screens: 3 columns, 2 rows for full width */
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto;
-        width: max-content;
-        width: 300px;
     }
 
     .achievements,
     .primary-interest {
         grid-column: span 3;
+        background-color: #00ABF0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-align: center;
+    }
+
+    .achievements h3,
+    .primary-interest h3 {
+        margin-bottom: 10px;
     }
 }
