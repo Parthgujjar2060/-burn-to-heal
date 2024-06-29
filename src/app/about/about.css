@@ -7,19 +7,19 @@
 
 .about-content {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto ;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
-    gap: 20px; /* Adjust gap between grid items */
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 40px;
 }
 
 .grid-item {
-    position: relative; /* Ensure items are positioned relative for z-index */
+    position: relative;
 }
-
 
 .skills {
     margin: 0;
@@ -45,35 +45,24 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* .otherDiv:hover,
-.interpersonalDiv:hover,
-.professionalDiv:hover,
-.uiDiv:hover,
-.webDiv:hover,
-.androidDiv:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-} */
-
 .backgroundcard {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Push background behind main content */
-    transform: rotate(0deg); /* Initial no rotation */
-    transition: transform 0.3s ease; /* Smooth transition for transform */
-
-    /* Additional styling properties as needed */
-    background-color: #f0f0f0; /* Example background color */
+    z-index: -1;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    background-color: #00ABF0;
+    opacity: 0.5;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Rotate anticlockwise on hover */
+
 .grid-item:hover .backgroundcard {
-    transform: rotate(-30deg); /* Adjust the degree of rotation as desired */
+    transform: rotate(-10deg);
 }
 
 
