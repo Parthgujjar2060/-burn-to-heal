@@ -7,7 +7,15 @@
 
 .about-content {
     max-width: 1000px;
-    margin: 0 auto ;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-content.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .grid-container {
@@ -60,11 +68,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .grid-item:hover .backgroundcard {
     transform: rotate(-10deg);
 }
-
 
 h2 {
     color: #fff;
