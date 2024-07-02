@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                                 {Array.from("a Full Stack Developer").map((char, i) => (
                                     <span
                                         key={i}
-                                        className={`text-blue-500 animate-reveal delay-${i * 3} text-4xl m-3`}
+                                        className={`text-blue-500 animate-reveal delay-${i * 3} m-3`}
                                     >{char}
                                     </span>
                                 ))}
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
                         </div>
 
                         <div>
-                            <p className="paragraph w-96" style={{ width: "410px" }}>
+                            <p className="paragraph">
                                 Full-Stack Developer with ability to learn and collaborate
                                 in rapidly changing enviroments and compositions.
                             </p>
@@ -131,11 +131,7 @@ const Home: React.FC = () => {
 
                 </div>
                 <div className="flex justify-center items-center w-24">
-                    {homeData && (
-                        <div className="devimage-container" >
-                            <img className="devimage" src={homeData.imageDev} alt="Developer image" />
-                        </div>
-                    )}
+
                 </div>
                 {logo && Object.keys(logo).map((key, index) => {
                     const logoData = logo[key] as HomeData;
