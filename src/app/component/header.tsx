@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
+import  '../component/header.css'
 import Link from 'next/link';
 
 const links = ["Home", "About", "Avocations", "Contact"];
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
         <img src={headerData?.logo} alt="icon" className="w-10 h-10" />
       </div>
 
-      <ul className="flex justify-center space-x-8" style={{ margin: '0 auto' }}>
+      <ul className="navbar flex justify-center space-x-8" style={{ margin: '0 auto' }}>
         {links.map((link) => (
           <li key={link} className="p-3 transition duration-500 ease-in-out hover:text-blue-500 ">
             <Link href={`/${link.toLowerCase()}`}>
