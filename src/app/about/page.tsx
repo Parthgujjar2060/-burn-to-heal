@@ -158,6 +158,13 @@ const About = () => {
                 </div>
             )}
 
+            <div>
+                Achievments
+            </div>
+
+            <div>
+                Experience
+             </div>   
         </div>
 
     );
