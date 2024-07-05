@@ -16,6 +16,10 @@ interface aboutData {
         webdev: { [key: string]: string };
         android: { [key: string]: string };
     };
+    education: {
+        college: string;
+        program: string;
+    };
 }
 
 const other = (
@@ -56,6 +60,7 @@ const handsIcon = (
 
 const About = () => {
     const [data, setData] = useState<aboutData | null>(null);
+    const [education, setEducation] = useState<{ college: string; program: string } | null>(null);
 
     useEffect(() => {
         const aboutRef = ref(database, 'about');
@@ -70,6 +75,20 @@ const About = () => {
             .catch((error) => {
                 console.error("Error fetching about data: ", error);
             });
+
+        const educationRef = ref(database, 'education');
+        get(educationRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    setEducation(snapshot.val());
+                } else {
+                    console.log("No education data available");
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching education data: ", error);
+            }
+            );
     }, []);
 
     return (
@@ -98,7 +117,7 @@ const About = () => {
                             <div className="interpersonalDiv">
                                 <div className="backgroundcard"></div>
                                 <div>{handsIcon}</div>
-                                <h2>Interpersonal Skills</h2>
+                                <h2>Interpersonal</h2>
                                 <ul className='skills'>
                                     {Object.values(data.skills.interpersonalskills).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
@@ -110,7 +129,7 @@ const About = () => {
                             <div className="professionalDiv">
                                 <div className="backgroundcard"></div>
                                 <div>{professionalContent}</div>
-                                <h2>Professional Skills</h2>
+                                <h2>Professional</h2>
                                 <ul className='skills'>
                                     {Object.values(data.skills.professional).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
@@ -122,7 +141,7 @@ const About = () => {
                             <div className="uiDiv">
                                 <div className="backgroundcard"></div>
                                 <div>{figmaContent}</div>
-                                <h2>UI Skills</h2>
+                                <h2>UI/UX</h2>
                                 <ul className='skills'>
                                     {Object.values(data.skills.ui).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
@@ -134,7 +153,7 @@ const About = () => {
                             <div className="webDiv">
                                 <div className="backgroundcard"></div>
                                 <div>{laptopIcon}</div>
-                                <h2>Web Development Skills</h2>
+                                <h2>Web Dev</h2>
                                 <ul className='skills'>
                                     {Object.values(data.skills.webdev).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
@@ -146,7 +165,7 @@ const About = () => {
                             <div className="androidDiv">
                                 <div className="backgroundcard"></div>
                                 <div>{android}</div>
-                                <h2>Android Development</h2>
+                                <h2>Android Dev</h2>
                                 <ul className='skills'>
                                     {Object.values(data.skills.android).map((skill, index) => (
                                         <li key={index}>• {skill}</li>
@@ -158,16 +177,19 @@ const About = () => {
                 </div>
             )}
 
-            <div>
-                Achievments
-            </div>
-
-            <div>
-                Experience
-             </div>   
+            {education && (
+                <div className="grid-item">
+                    <div className="educationDiv">
+                        <div className="backgroundcard"></div>
+                        <h2>Education</h2>
+                        <p>{education.college}</p>
+                        <p>{education.program}</p>
+                    </div>
+                </div>
+            )}
         </div>
-
     );
 };
+
 
 export default About;
