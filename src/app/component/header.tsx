@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
-import  '../component/header.css'
+import '../component/header.css'
 import Link from 'next/link';
 
 const links = ["Home", "About", "Avocations", "Contact"];
@@ -13,7 +13,8 @@ interface HomeData {
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
-   
+  const [windowsWidth, setWindowsWidth] = React.useState<number>(0);
+
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
@@ -29,6 +30,17 @@ const Header: React.FC = () => {
     }).catch((error) => {
       console.error("Error fetching data: ", error);
     });
+
+    const handleResize = () => {
+      setWindowsWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+
   }, []);
 
   return (
@@ -52,6 +64,10 @@ const Header: React.FC = () => {
           <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
         </Link>
       </div>
+
+      {windowsWidth < 769 && (
+        <div className="accessibility-controller"></div>
+      )}
     </nav>
   );
 }
