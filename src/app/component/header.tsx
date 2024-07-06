@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
-import '../component/header.css'
+import Image from 'next/image';
+import '../component/header.css';
 import Link from 'next/link';
 
 const links = ["Home", "About", "Avocations", "Contact"];
@@ -13,8 +14,7 @@ interface HomeData {
 
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
-  const [windowsWidth, setWindowsWidth] = React.useState<number>(0);
-
+  const [windowWidth, setWindowWidth] = React.useState<number>(0);
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
@@ -22,31 +22,30 @@ const Header: React.FC = () => {
     get(headerRef).then((snapshot) => {
       if (snapshot.exists()) {
         setHeaderData(snapshot.val());
-      }
-      else {
+      } else {
         console.log("No data available");
       }
-
     }).catch((error) => {
       console.error("Error fetching data: ", error);
     });
 
     const handleResize = () => {
-      setWindowsWidth(window.innerWidth);
-    }
+      setWindowWidth(window.innerWidth);
+    };
 
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-    }
-
+    };
   }, []);
 
   return (
     <nav className="flex justify-between items-center px-10 py-5 h-13">
       <div style={{ marginLeft: '8%' }}>
-        <img src={headerData?.logo} alt="icon" className="w-10 h-10" />
+        {headerData?.logo && (
+          <Image src={headerData.logo} alt="icon" width={40} height={40} className="w-10 h-10" />
+        )}
       </div>
 
       <ul className="navbar flex justify-center space-x-8" style={{ margin: '0 auto' }}>
@@ -61,15 +60,15 @@ const Header: React.FC = () => {
 
       <div>
         <Link href="/contact">
-          <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
+          <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
         </Link>
       </div>
 
-      {windowsWidth < 769 && (
+      {windowWidth < 769 && (
         <div className="accessibility-controller"></div>
       )}
     </nav>
   );
-}
+};
 
 export default Header;
