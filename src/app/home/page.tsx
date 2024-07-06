@@ -105,7 +105,7 @@ const Home: React.FC = () => {
                         <div className="grid grid-cols-2 mt-5" style={{ gap: "140px" }}>
                             <div className="">
                                 <Link href="/contact">
-                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
+                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
                                 </Link>
                             </div>
                             <div className="flex gap-2">
