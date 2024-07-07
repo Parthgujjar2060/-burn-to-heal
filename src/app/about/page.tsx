@@ -176,20 +176,8 @@ const About = () => {
                     </div>
                 </div>
             )}
-
-            {education && (
-                <div className="grid-item">
-                    <div className="educationDiv">
-                        <div className="backgroundcard"></div>
-                        <h2>Education</h2>
-                        <p>{education.college}</p>
-                        <p>{education.program}</p>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
-
 
 export default About;
