@@ -1,21 +1,15 @@
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f30000;
+}
 
 .logo {
     position: absolute;
     opacity: 0.4;
-}
-
-.name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #00ABF0;
-    margin: 0 0 10px;
-}
-
-.paragraph {
-    font-size: 1rem;
-    margin: 0 auto;
-    width: 60%;
-
 }
 
 @keyframes reveal {
@@ -39,19 +33,19 @@
     animation: reveal 3s infinite;
 }
 
+
 @media (max-width: 953px) {
     .devimage {
         display: none;
     }
 
     .name {
-        width: max-content;
-        margin: 0 auto 10px;
+        width: 70%;
+        margin: 0 auto;
     }
 
     .tagline {
         width: max-content;
-        font-size: 1.5rem;
         margin: 0 auto;
     }
 
@@ -60,13 +54,6 @@
         border-radius: 50%;
         border: 4px solid #00ABF0;
         margin: 0 auto;
-    }
-
-    .paragraph {
-        font-size: 0.9rem;
-        margin: 20px auto 20px;
-        width: 55%;
-
     }
 
     .main-container {
@@ -84,10 +71,47 @@
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
-        grid-row-gap: 70px;
-        margin-top: 50px;
+        grid-row-gap: 100px;
+        margin-top: -100px;
         margin-right: 0px;
         margin-left: 85px;
+        height: max-content;
+    }
+
+    .main-container> :first-child {
+        order: 2;
+    }
+
+    .main-container> :last-child {
+        grid-row: 1;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .parthimage {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+    }
+
+    .devimage-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .devimage {
+        display: none;
+    }
+
+    .main-container {
+        grid-row-gap: 80px;
+        margin: 0 auto 0 90px;
+        height: max-content;
     }
 
     .main-container> :first-child {
@@ -99,77 +123,29 @@
     }
 
     .name {
-        width: max-content;
-        margin: 0 auto 10px;
+        width: 40%;
+        margin: 10px auto;
     }
 
     .tagline {
         width: max-content;
-        margin: 0 auto 10px;
+        margin: 0 auto;
     }
+
 
     .logo img {
         width: 50%;
     }
 
     .parthimage {
-        width: 75%;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
-        border: 4px solid #00ABF0;
+        border: 4px solid #00b7ff;
     }
 
     .devimage-container {
         display: flex;
         flex-direction: column;
     }
-
-    .logo {
-        position: absolute;
-        opacity: 0.4;
-        z-index: -1;
-    }
-
-    .logo-0 {
-        left: 100px !important;
-        top: 120px !important;
-    }
-
-    .logo-1 {
-        left: 200px !important;
-        top: 200px !important;
-    }
-
-    .logo-2 {
-        left: 100px !important;
-        top: 300px !important;
-    }
-
-    .logo-3 {
-        left: 200px !important;
-        top: 400px !important;
-    }
-
-    .logo-4 {
-        left: 100px !important;
-        top: 500px !important;
-    }
-
-    .logo-5 {
-        left: 200px !important;
-        top: 600px !important;
-    }
-
-    .logo-6 {
-        left: 100px !important;
-        top: 700px !important;
-    }
-
-    .logo-7 {
-        left: 100px !important;
-        top: 800px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Add styles for screens smaller than 480px here if needed */
 }
