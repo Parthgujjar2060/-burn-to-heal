@@ -1,10 +1,17 @@
+body {
+    margin: 0 auto !important;
+    height: 14500px;
+    background-color: #081B29;
+
+}
+
 .home-container {
     position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f30000;
+    background-color: #01204b;
 }
 
 .logo {
@@ -71,7 +78,7 @@
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
-        grid-row-gap: 7cap;
+        grid-row-gap: 50px;
         margin-top: 30px;
         margin-right: 0px;
         margin-left: 85px;
@@ -117,9 +124,14 @@
         display: none;
     }
 
+    .main {
+        height: max-content;
+    }
+
     .main-container {
         grid-row-gap: 80px;
         width: full-width;
+        height: max-content;
         margin: 0 auto 0 50px;
         height: max-content;
     }
