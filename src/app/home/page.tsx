@@ -23,7 +23,7 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         const homeRef = ref(database, 'home');
-        const linkRef = ref(database, 'home/links');  
+        const linkRef = ref(database, 'home/links');
         const logoRef = ref(database, 'home/icon');
         const imageRef = ref(database, 'home/imageDev');
 
