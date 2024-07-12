@@ -78,7 +78,7 @@ const Home: React.FC = () => {
 
     return (
         <div className="main">
-            <div className="flex items-center pb-28 h-screen">
+            <div className="flex items-center pb-28 h-scree">
                 <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
                     <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
                         <div className="name mr-60">

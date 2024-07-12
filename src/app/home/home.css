@@ -1,8 +1,7 @@
 body {
     margin: 0 auto !important;
-    height: 14500px;
+    height: max-content;
     background-color: #081B29;
-
 }
 
 .home-container {
@@ -73,6 +72,11 @@ body {
     .devimage {
         display: none;
     }
+   
+    .body {
+        height: 100vh;
+    }
+
 
     .main-container {
         display: grid;
@@ -86,7 +90,7 @@ body {
     }
 
     .name {
-        width: 28%;
+        width: 30%;
         margin: 0 auto 20px auto;
     }
 
@@ -124,16 +128,14 @@ body {
         display: none;
     }
 
-    .main {
-        height: max-content;
+    .main{
+        height: 100vh;
     }
 
     .main-container {
         grid-row-gap: 80px;
         width: full-width;
-        height: max-content;
         margin: 0 auto 0 50px;
-        height: max-content;
     }
 
     .main-container> :first-child {
