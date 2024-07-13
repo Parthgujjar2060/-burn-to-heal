@@ -77,7 +77,6 @@ body {
         height: 100vh;
     }
 
-
     .main-container {
         display: grid;
         grid-template-rows: auto auto;
@@ -96,7 +95,7 @@ body {
 
     .tagline {
         width: max-content;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 10px auto;
     }
 
     .main-container> :first-child {
