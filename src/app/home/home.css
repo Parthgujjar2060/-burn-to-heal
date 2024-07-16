@@ -13,14 +13,6 @@ body {
     background-color: #01204b;
 }
 
-.ring{
-    position: absolute;
-    background: radial-gradient(circle, #00ABF0 0%, #01204b 100%);
-    border-radius: 50%;
-    z-index: -1;
-
-}
-
 .logo {
     position: absolute;
     opacity: 0.4;
