@@ -1,6 +1,6 @@
 .about-container {
-    height: 100vh;
-    overflow-y: auto;
+    height: 100%;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -118,21 +118,18 @@ svg {
     margin-bottom: 15px;
 }
 
-/* Medium screens: 2 columns */
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Large screens: 3 columns */
 @media (min-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Extra large screens: 3 columns, 2 rows for full width */
 @media (min-width: 1440px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
