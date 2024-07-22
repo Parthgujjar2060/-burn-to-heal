@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Image from 'next/image';
@@ -15,6 +15,9 @@ interface HomeData {
 const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
   const [windowWidth, setWindowWidth] = React.useState<number>(0);
+  const [dragging, setDragging] = React.useState<boolean>(false);
+  const [position, setPosition] = React.useState<{ x: number, y: number }>({ x:700, y: 700});
+  const dragRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const headerRef = ref(database, 'header');
@@ -39,6 +42,37 @@ const Header: React.FC = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setDragging(true);
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (dragging) {
+      setPosition({ x: e.clientX, y: e.clientY });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
+  useEffect(() => {
+
+    if (dragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+
+    } else {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    }
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [dragging]);
 
   return (
     <nav className="flex justify-between items-center px-10 py-5 h-13">
@@ -65,7 +99,11 @@ const Header: React.FC = () => {
       </div>
 
       {windowWidth < 769 && (
-        <div className="accessibility-controller"></div>
+        <div ref={dragRef}
+          className="accessibility-controller"
+          style={{ position: 'absolute', left: position.x, top: position.y }}
+          onMouseDown={handleMouseDown}>
+        </div>
       )}
     </nav>
   );
