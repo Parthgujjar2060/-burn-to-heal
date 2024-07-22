@@ -16,7 +16,8 @@ const Header: React.FC = () => {
   const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
   const [windowWidth, setWindowWidth] = React.useState<number>(0);
   const [dragging, setDragging] = React.useState<boolean>(false);
-  const [position, setPosition] = React.useState<{ x: number, y: number }>({ x:700, y: 700});
+  const [position, setPosition] = React.useState<{ x: number, y: number }>({ x: 700, y: 700 });
+  const [blinking, setBlinking] = React.useState<boolean>(true);
   const dragRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,7 +44,6 @@ const Header: React.FC = () => {
     };
   }, []);
 
-
   const handleMouseDown = (e: React.MouseEvent) => {
     setDragging(true);
   };
@@ -59,11 +59,9 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
-
     if (dragging) {
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUp);
-
     } else {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
@@ -73,6 +71,15 @@ const Header: React.FC = () => {
       window.removeEventListener('mouseup', handleMouseUp);
     };
   }, [dragging]);
+
+  useEffect(() => {
+    if (windowWidth < 769) {
+      setBlinking(true);
+      const timeout = setTimeout(() => setBlinking(false), 3000); // Blink for 3 seconds
+
+      return () => clearTimeout(timeout);
+    }
+  }, [windowWidth]);
 
   return (
     <nav className="flex justify-between items-center px-10 py-5 h-13">
@@ -99,11 +106,12 @@ const Header: React.FC = () => {
       </div>
 
       {windowWidth < 769 && (
-        <div ref={dragRef}
-          className="accessibility-controller"
+        <div
+          ref={dragRef}
+          className={`accessibility-controller ${blinking ? 'blinking' : ''}`}
           style={{ position: 'absolute', left: position.x, top: position.y }}
-          onMouseDown={handleMouseDown}>
-        </div>
+          onMouseDown={handleMouseDown}
+        ></div>
       )}
     </nav>
   );
