@@ -15,7 +15,7 @@
         inset -2px -2px 5px rgba(255, 255, 255, 0.8),
         inset 2px 2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
-    bottom: 1.5rem;
+    bottom: 1.5r em;
     right: 1.5rem;
     display: flex;
     justify-content: center;
@@ -23,6 +23,9 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     z-index: 1000;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 }
 
 @keyframes blink {
@@ -50,3 +53,35 @@
         inset -2px -2px 8px rgba(255, 255, 255, 0.9),
         inset 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+.hidden {
+    display: none;
+  }
+
+  .navbar {
+    display: none; /* Hide the navbar initially for small screens */
+  }
+  
+  .show-links {
+    display: flex; /* Show the navbar when the class is toggled */
+  }
+  
+  .link-circle {
+    position: absolute;
+    transition: transform 0.5s ease;
+  }
+  
+  .link-home {
+    transform: translate(-70px, -70px); /* Adjust the position */
+  }
+  
+  .link-about {
+    transform: translate(70px, -70px); /* Adjust the position */
+  }
+  
+  .link-avocations {
+    transform: translate(-70px, 70px); /* Adjust the position */
+  }
+  
+  .link-contact {
+    transform: translate(70px, 70px); /* Adjust the position */
+  }
