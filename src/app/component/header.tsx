@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
 import Image from 'next/image';
@@ -13,11 +13,12 @@ interface HomeData {
 }
 
 const Header: React.FC = () => {
-  const [headerData, setHeaderData] = React.useState<HomeData | null>(null);
-  const [windowWidth, setWindowWidth] = React.useState<number>(0);
-  const [dragging, setDragging] = React.useState<boolean>(false);
-  const [position, setPosition] = React.useState<{ x: number, y: number }>({ x: 700, y: 700 });
-  const [blinking, setBlinking] = React.useState<boolean>(true);
+  const [headerData, setHeaderData] = useState<HomeData | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [dragging, setDragging] = useState<boolean>(false);
+  const [position, setPosition] = useState<{ x: number, y: number }>({ x: 700, y: 700 });
+  const [blinking, setBlinking] = useState<boolean>(true);
+  const [showLinks, setShowLinks] = useState<boolean>(false);
   const dragRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -81,6 +82,10 @@ const Header: React.FC = () => {
     }
   }, [windowWidth]);
 
+  const navigation = () => {
+    setShowLinks(!showLinks);
+  };
+
   return (
     <nav className="flex justify-between items-center px-10 py-5 h-13">
       <div style={{ marginLeft: '8%' }}>
@@ -106,12 +111,26 @@ const Header: React.FC = () => {
       </div>
 
       {windowWidth < 769 && (
-        <div
-          ref={dragRef}
-          className={`accessibility-controller ${blinking ? 'blinking' : ''}`}
-          style={{ position: 'absolute', left: position.x, top: position.y }}
-          onMouseDown={handleMouseDown}
-        ></div>
+        <>
+          <div
+            ref={dragRef}
+            className={`accessibility-controller ${blinking ? 'blinking' : ''}`}
+            style={{ position: 'absolute', left: position.x, top: position.y }}
+            onMouseDown={handleMouseDown}
+            onClick={navigation}
+          ></div>
+          {showLinks && (
+            <div className="link-circle-wrapper" style={{ position: 'absolute', left: position.x, top: position.y }}>
+              {links.map((link, index) => (
+                <div key={link} className={`link-circle link-${link.toLowerCase()}`}>
+                  <Link href={`/${link.toLowerCase()}`}>
+                    {link}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </nav>
   );
