@@ -76,13 +76,13 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (windowWidth < 769) {
       setBlinking(true);
-      const timeout = setTimeout(() => setBlinking(false), 3000); // Blink for 3 seconds
+      const timeout = setTimeout(() => setBlinking(false), 2000); 
 
       return () => clearTimeout(timeout);
     }
   }, [windowWidth]);
 
-  const navigation = () => {
+  const navigationClick = () => {
     setShowLinks(!showLinks);
   };
 
@@ -111,26 +111,30 @@ const Header: React.FC = () => {
       </div>
 
       {windowWidth < 769 && (
-        <>
-          <div
-            ref={dragRef}
-            className={`accessibility-controller ${blinking ? 'blinking' : ''}`}
-            style={{ position: 'absolute', left: position.x, top: position.y }}
-            onMouseDown={handleMouseDown}
-            onClick={navigation}
-          ></div>
-          {showLinks && (
-            <div className="link-circle-wrapper" style={{ position: 'absolute', left: position.x, top: position.y }}>
-              {links.map((link, index) => (
-                <div key={link} className={`link-circle link-${link.toLowerCase()}`}>
-                  <Link href={`/${link.toLowerCase()}`}>
-                    {link}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          )}
-        </>
+        <div
+          ref={dragRef}
+          className={`accessibility-controller ${blinking ? 'blinking' : ''}`}
+          style={{ position: 'absolute', left: position.x, top: position.y }}
+          onMouseDown={handleMouseDown}
+          onClick={navigationClick}
+        ></div>
+      )}
+
+      {windowWidth < 769 && (
+        <div className={`link-circle-wrapper ${showLinks ? 'show' : ''}`} style={{ position: 'absolute', left: position.x, top: position.y }}>
+          <Link href="/home">
+            <div className={`link-circle link-home ${showLinks ? 'show' : ''}`}>Home</div>
+          </Link>
+          <Link href="/about">
+            <div className={`link-circle link-about ${showLinks ? 'show' : ''}`}>About</div>
+          </Link>
+          <Link href="/avocations">
+            <div className={`link-circle link-avocations ${showLinks ? 'show' : ''}`}>Avocations</div>
+          </Link>
+          <Link href="/contact">
+            <div className={`link-circle link-contact ${showLinks ? 'show' : ''}`}>Contact</div>
+          </Link>
+        </div>
       )}
     </nav>
   );
