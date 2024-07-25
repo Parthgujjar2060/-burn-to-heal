@@ -1,0 +1,94 @@
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+}
+
+.accessibility-controller {
+    width: 0.5cm;
+    height: 0.5cm;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    border-radius: 50%;
+    box-shadow:
+        0 0 8px rgba(0, 0, 0, 0.2),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.8),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking {
+    animation: blink 1s linear infinite;
+}
+
+.accessibility-controller:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.3),
+        inset -2px -2px 8px rgba(255, 255, 255, 0.9),
+        inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.show-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-circle-wrapper {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.link-circle {
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show .link-circle {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.link-home {
+    transform: translate(-30px, -40px);
+    
+}
+
+.link-about {
+    transform: translate(30px, -40px);
+}
+
+.link-avocations {
+    transform: translate(-40px, 30px);
+}
+
+.link-contact {
+    transform: translate(40px, 30px);
+}

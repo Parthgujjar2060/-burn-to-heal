@@ -81,11 +81,11 @@ const Home: React.FC = () => {
             <div className="flex items-center pb-28 h-screen">
                 <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
                     <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
-                        <div className="mr-60">
+                        <div className="name mr-60">
                             <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
-                        <div className="flex m-5">
-                            <p className="flex space-x-1 overflow-hidden animate-pulse">
+                        <div className="tagline flex m-5">
+                            <p className=" taglinewords flex space-x-1 overflow-hidden animate-pulse">
                                 {Array.from("a Full Stack Developer").map((char, i) => (
                                     <span
                                         key={i}
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
                         </div>
 
                         <div>
-                            <p className=" w-96" style={{ width: "410px" }}>
+                            <p className="paragraph w-96" style={{ width: "410px" }}>
                                 Full-Stack Developer with ability to learn and collaborate
                                 in rapidly changing enviroments and compositions.
                             </p>
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
                         <div className="grid grid-cols-2 mt-5" style={{ gap: "140px" }}>
                             <div className="">
                                 <Link href="/contact">
-                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let's Talk</button>
+                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
                                 </Link>
                             </div>
                             <div className="flex gap-2">
@@ -122,12 +122,13 @@ const Home: React.FC = () => {
                     <div className="flex justify-center items-center">
                         {homeData && (
                             <div className="flex justify-center items-center">
-                                <div className="w-full h-full border-3 border-blue-500 overflow-hidden" style={{ borderRadius: '50%' }}>
-                                    <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <div className="w-full h-full border-3 border-blue-500 overflow-hidden">
+                                    <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ objectFit: 'cover' }} />
                                 </div>
                             </div>
                         )}
                     </div>
+
                 </div>
                 <div className="flex justify-center items-center w-24">
                     {homeData && (
