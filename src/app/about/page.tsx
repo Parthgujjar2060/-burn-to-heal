@@ -173,6 +173,12 @@ const About = () => {
                                 </ul>
                             </div>
                         </div>
+                        <div>
+                            <div className="educationDiv">
+                                <h2>Education</h2>
+                                <p>Hello buddies come to here</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
