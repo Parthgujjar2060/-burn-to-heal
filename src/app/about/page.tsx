@@ -178,7 +178,7 @@ const About = () => {
                                 <h2>Education</h2>
                                 <p>Hello buddies come to here</p>
                             </div>
-                            <div>
+                            <div className="achievementDiv">
                                 <h2>Achievements</h2>
                                 <p>Some of my achievements</p>
                             </div>
