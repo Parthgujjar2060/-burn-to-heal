@@ -151,12 +151,12 @@ svg {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .about-content {
+
+   .about-content {
         max-width: 750px;
         margin: 0 auto;
         animation: slideInFromLeft 1.5s ease-in-out;
-        max-height: 650px;
+        max-height: 750px;
         overflow-y: auto;
     }
 }
