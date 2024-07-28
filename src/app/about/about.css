@@ -152,7 +152,7 @@ svg {
         grid-template-columns: repeat(2, 1fr);
     }
 
-   .about-content {
+    .about-content {
         max-width: 750px;
         margin: 0 auto;
         animation: slideInFromLeft 1.5s ease-in-out;
@@ -179,6 +179,14 @@ svg {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto;
+    }
+    
+    .about-content {
+        max-width: 1150px;
+        margin: 0 auto;
+        animation: slideInFromLeft 1.5s ease-in-out;
+        max-height: 750px;
+        overflow-y: auto;
     }
 
     .achievements,
