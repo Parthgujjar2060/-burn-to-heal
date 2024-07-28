@@ -133,13 +133,27 @@ svg {
     }
 }
 
-@media (min-width: 982px) {
+@media (max-width: 982px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .about-content {
-        max-width: 700px;
+        max-width: 750px;
+        margin: 0 auto;
+        animation: slideInFromLeft 1.5s ease-in-out;
+        max-height: 750px;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 982px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        max-width: 750px;
         margin: 0 auto;
         animation: slideInFromLeft 1.5s ease-in-out;
         max-height: 650px;
@@ -147,13 +161,13 @@ svg {
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .about-content {
-        max-width: 500px;
+        max-width: 900px;
         margin: 0 auto;
         animation: slideInFromLeft 1.5s ease-in-out;
         max-height: 650px;
