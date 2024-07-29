@@ -28,9 +28,11 @@
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -78,7 +80,7 @@
 
 .link-home {
     transform: translate(-30px, -40px);
-    
+
 }
 
 .link-about {
@@ -93,21 +95,15 @@
     transform: translate(40px, 30px);
 }
 
-@media (max-width: 982px) {
- 
-}
+@media (max-width: 982px) {}
 
-@media (min-width: 982px) {
-  
-}
+@media (min-width: 982px) {}
 
-@media (min-width: 1024px) {
- 
-}
+@media (min-width: 1024px) {}
 
 @media (min-width: 1440px) {
-    .contact{
-         margin-right: 1220px;
+    .contact {
+        margin-right: 1220px;
     }
 
 }
