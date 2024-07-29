@@ -104,7 +104,7 @@ const Header: React.FC = () => {
         ))}
       </ul>
 
-      <div>
+      <div className='contact'>
         <Link href="/contact">
           <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
         </Link>
