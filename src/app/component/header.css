@@ -98,8 +98,9 @@
 @media (min-width: 1024px) {}
 
 @media (min-width: 1440px) {
+
     .contact {
-        margin-right: 1220px;
+        margin-right: 230px;
     }
 
 }
