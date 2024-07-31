@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 .about-content {
@@ -10,6 +11,7 @@
     animation: slideInFromLeft 1.5s ease-in-out;
     max-height: 650px;
     overflow-y: auto;
+    padding: 30px;
 }
 
 .about-content.visible {
