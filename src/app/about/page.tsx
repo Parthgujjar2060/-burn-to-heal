@@ -176,7 +176,9 @@ const About = () => {
                         <div>
                             <div className="educationDiv">
                                 <h2>Education</h2>
-                                 
+                                <p>Post Graduation Diploma (2023) GPA - 3.7
+                                Computer Programming</p>
+                                <p>Conestoga College Waterloo, Ontario</p>
                             </div>
                             <div className="achievementDiv">
                                 <h2>Achievements</h2>
