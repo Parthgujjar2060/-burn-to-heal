@@ -1,0 +1,124 @@
+[debug] [2024-07-31T03:32:15.776Z] ----------------------------------------------------------------------
+[debug] [2024-07-31T03:32:15.780Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ParthVGujjar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-31T03:32:15.780Z] CLI Version:   13.7.5
+[debug] [2024-07-31T03:32:15.781Z] Platform:      win32
+[debug] [2024-07-31T03:32:15.781Z] Node Version:  v21.6.1
+[debug] [2024-07-31T03:32:15.781Z] Time:          Tue Jul 30 2024 23:32:15 GMT-0400 (Eastern Daylight Saving Time)
+[debug] [2024-07-31T03:32:15.781Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-31T03:32:15.877Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-31T03:32:15.877Z] > authorizing via signed-in user (parthgujjar2003@gmail.com)
+[debug] [2024-07-31T03:32:15.877Z] [iam] checking project unknown-breath-vibes for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-31T03:32:15.879Z] > refreshing access token with scopes: []
+[debug] [2024-07-31T03:32:15.882Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-31T03:32:15.882Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-31T03:32:16.118Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-07-31T03:32:16.119Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-31T03:32:16.127Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/unknown-breath-vibes:testIamPermissions [none]
+[debug] [2024-07-31T03:32:16.127Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/unknown-breath-vibes:testIamPermissions x-goog-quota-user=projects/unknown-breath-vibes
+[debug] [2024-07-31T03:32:16.127Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/unknown-breath-vibes:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T03:32:17.430Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/unknown-breath-vibes:testIamPermissions 200
+[debug] [2024-07-31T03:32:17.430Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/unknown-breath-vibes:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T03:32:17.431Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes [none]
+[debug] [2024-07-31T03:32:18.957Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes 200
+[debug] [2024-07-31T03:32:18.957Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes {"projectId":"unknown-breath-vibes","projectNumber":"37559162946","displayName":"unknown-breath-vibes","name":"projects/unknown-breath-vibes","resources":{"hostingSite":"unknown-breath-vibes","realtimeDatabaseInstance":"unknown-breath-vibes-default-rtdb","storageBucket":"unknown-breath-vibes.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1d486708-6027-4291-b061-0b01f71bf976"}
+[debug] [2024-07-31T03:32:25.277Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites pageToken=&pageSize=10
+[debug] [2024-07-31T03:32:26.733Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites 200
+[debug] [2024-07-31T03:32:26.733Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites {"sites":[{"name":"projects/unknown-breath-vibes/sites/unknown-breath-vibes","defaultUrl":"https://unknown-breath-vibes.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-31T03:32:26.734Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites 
+[debug] [2024-07-31T03:32:26.905Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites 200
+[debug] [2024-07-31T03:32:26.906Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites {"sites":[{"name":"projects/unknown-breath-vibes/sites/unknown-breath-vibes","defaultUrl":"https://unknown-breath-vibes.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-31T03:32:26.906Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes/webApps/-/config [none]
+[debug] [2024-07-31T03:32:27.538Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes/webApps/-/config 200
+[debug] [2024-07-31T03:32:27.538Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/unknown-breath-vibes/webApps/-/config {"projectId":"unknown-breath-vibes","appId":"1:37559162946:web:715a246ae288ef7058b5db","databaseURL":"https://unknown-breath-vibes-default-rtdb.firebaseio.com","storageBucket":"unknown-breath-vibes.appspot.com","locationId":"us-central","apiKey":"AIzaSyB6BfT7787CmwGPk2665ZNIuXXgNeA9Wt0","authDomain":"unknown-breath-vibes.firebaseapp.com","messagingSenderId":"37559162946"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-31T03:32:40.156Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites/unknown-breath-vibes [none]
+[debug] [2024-07-31T03:32:40.358Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites/unknown-breath-vibes 200
+[debug] [2024-07-31T03:32:40.359Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/unknown-breath-vibes/sites/unknown-breath-vibes {"name":"projects/unknown-breath-vibes/sites/unknown-breath-vibes","defaultUrl":"https://unknown-breath-vibes.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.3
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info] <w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[2]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[3]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+
+[info] Failed to compile.
+
+
+[info] ./src/app/home/home.css:53:9
+Syntax error: C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css Unknown word
+
+  51 |     .name{
+  52 |   main
+> 53 |         width: 70%;
+     |         ^
+  54 |         margin: 0 auto;
+  55 |     }
+
+./src/app/home/home.css
+Syntax error: C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css Unknown word (53:9)
+
+  51 |     .name{
+  52 |   main
+> 53 |         width: 70%;
+     |         ^
+  54 |         margin: 0 auto;
+  55 |     }
+
+    at tryRunOrWebpackError (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:312989)
+    at __webpack_require_module__ (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:131165)
+    at __nested_webpack_require_153728__ (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:130607)
+    at C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:131454
+    at symbolIterator (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:13:28858), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:13:26012)
+    at C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:130328
+    at symbolIterator (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+-- inner error --
+Syntax error: C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css Unknown word (53:9)
+
+  51 |     .name{
+  52 |   main
+> 53 |         width: 70%;
+     |         ^
+  54 |         margin: 0 auto;
+  55 |     }
+
+    at Object.<anonymous> (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[2]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[3]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css:1:7)
+    at C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:922493
+    at Hook.eval [as call] (eval at create (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:13:28636), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:13:25906)
+    at C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:131198
+    at tryRunOrWebpackError (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:312943)
+    at __webpack_require_module__ (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:131165)
+    at __nested_webpack_require_153728__ (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:130607)
+    at C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\webpack\bundle5.js:28:131454
+    at symbolIterator (C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+
+Generated code for C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[2]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[3]!C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\src\app\home\home.css
+
+Import trace for requested module:
+./src/app/home/home.css
+./src/app/home/page.tsx
+
+
+[info] 
+
+[info] > Build failed because of webpack errors
+
+[debug] [2024-07-31T03:32:58.028Z] Error: ENOENT: no such file or directory, open 'C:\Users\ParthVGujjar\Documents\WorkingArea\parthportfolio\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
