@@ -182,7 +182,8 @@ const About = () => {
                             </div>
                             <div className="achievementDiv">
                                 <h2>Achievements</h2>
-                                <p>Some of my achievements</p>
+                                <h3> Hackathon at Gujarat Institute of Engineering</h3>
+                                <h3> Partcipated in drone Competition of Lions International School</h3>
                             </div>
                         </div>
                     </div>
