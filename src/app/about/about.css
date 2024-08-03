@@ -161,6 +161,7 @@ svg {
 
     .about-content {
         max-width: 900px;
+        
         margin: 0 auto;
         animation: slideInFromLeft 1.5s ease-in-out;
         max-height: 650px;
