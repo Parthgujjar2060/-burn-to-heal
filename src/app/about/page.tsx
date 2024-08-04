@@ -173,7 +173,7 @@ const About = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div>
+                        <div className="grid-item">
                             <div className="educationDiv">
                                 <h2>Education</h2>
                                 <p>Post Graduation Diploma (2023) GPA - 3.7
