@@ -96,7 +96,7 @@ const About = () => {
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
-                        <div className="border">
+                        <div className="">
                             <p>{data.paragraph}</p>
                         </div>
                     </div>
