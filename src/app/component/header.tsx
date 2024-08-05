@@ -87,7 +87,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center px-10 py-5 h-13">
+    <nav className="logo flex justify-between items-center px-24 py-1 h-13">
       <div style={{ marginLeft: '8%' }}>
         {headerData?.logo && (
           <Image src={headerData.logo} alt="icon" width={40} height={40} className="logo w-10 h-10" />
