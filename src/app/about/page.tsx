@@ -177,13 +177,15 @@ const About = () => {
                             <div className="educationDiv">
                                 <h2>Education</h2>
                                 <p>Post Graduation Diploma (2023) GPA - 3.7
-                                Computer Programming</p>
+                                    Computer Programming</p>
                                 <p>Conestoga College Waterloo, Ontario</p>
                             </div>
                             <div className="achievementDiv">
                                 <h2>Achievements</h2>
-                                <h3> Hackathon at Gujarat Institute of Engineering</h3>
-                                <h3> Partcipated in drone Competition of Lions International School</h3>
+                                <h3> # Hackathon at Gujarat Institute of Engineering</h3>
+                                <h3> # Partcipated in drone Competition of Lions International School</h3>
+                                <h3> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
+                                <h3> # Achieved team leading award in Gujarat, India</h3>
                             </div>
                         </div>
                     </div>
