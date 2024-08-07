@@ -92,7 +92,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className="about-container">
+        <div className="about-container font-mono">
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
@@ -174,13 +174,13 @@ const About = () => {
                             </div>
                         </div>
                         <div className="grid-item">
-                            <div className="educationDiv">
-                                <h2>Education</h2>
+                            <div className="educationDiv font-mono">
+                                <h2 >Education</h2>
                                 <p>Post Graduation Diploma (2023) GPA - 3.7
                                     Computer Programming</p>
                                 <p>Conestoga College Waterloo, Ontario</p>
                             </div>
-                            <div className="achievementDiv">
+                            <div className="achievementDiv font-mono">
                                 <h2>Achievements</h2>
                                 <h3> # Hackathon at Gujarat Institute of Engineering</h3>
                                 <h3> # Partcipated in drone Competition of Lions International School</h3>
