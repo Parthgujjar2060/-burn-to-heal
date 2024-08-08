@@ -180,12 +180,12 @@ const About = () => {
                                     Computer Programming</p>
                                 <p>Conestoga College Waterloo, Ontario</p>
                             </div>
-                            <div className="achievementDiv font-mono">
+                            <div className="achievementDiv font-mono border rounded-xl p-2">
                                 <h2>Achievements</h2>
-                                <h3> # Hackathon at Gujarat Institute of Engineering</h3>
-                                <h3> # Partcipated in drone Competition of Lions International School</h3>
-                                <h3> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
-                                <h3> # Achieved team leading award in Gujarat, India</h3>
+                                <h3 className='border  rounded-xl p-2'> # Hackathon at Gujarat Institute of Engineering</h3>
+                                <h3 className='border  rounded-xl p-2'> # Partcipated in drone Competition of Lions International School</h3>
+                                <h3 className='border  rounded-xl p-2'> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
+                                <h3 className='border  rounded-xl p-2'>  # Achieved team leading award in Gujarat, India</h3>
                             </div>
                         </div>
                     </div>
