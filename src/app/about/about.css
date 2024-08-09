@@ -13,6 +13,12 @@
     scrollbar-width: none;
 }
 
+.background{
+    display: flex;
+    justify-content: center;
+    width: 500px;     
+}
+
 .about-content.visible {
     opacity: 1;
     transform: translateY(0);
@@ -68,9 +74,9 @@
 }
 
 .skills {
-    list-style-position: inside; 
-    padding-left: 0; 
-    margin-left: 0; 
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .skills li {
@@ -144,7 +150,7 @@ svg {
     .achievements,
     .primary-interest {
         grid-column: span 2;
-        background-color: #00ABF0;
+        background-color: #161b2f;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
