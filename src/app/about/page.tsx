@@ -173,25 +173,23 @@ const About = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="background">
-                            <div className="educationDiv font-mono">
-                                <h2>Education</h2>
-                                <p>Post Graduation Diploma (2023) GPA - 3.7
-                                    Computer Programming</p>
-                                <p>Conestoga College Waterloo, Ontario</p>
-                                <div className="educationDiv font-mono">
-                                    <p>Post Graduation Diploma (2020 - 2021) PR - 80%
-                                        Math & Computer</p>
-                                    <p>Gattu Vidhyalaya, Gujarat, India</p>
-                                </div>
-                            </div>
-                            <div className="achievements achievementDiv font-mono border rounded-xl p-2">
-                                <h2>Achievements</h2>
-                                <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Hackathon at Gujarat Institute of Engineering</h3>
-                                <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Partcipated in drone Competition of Lions International School</h3>
-                                <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
-                                <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Achieved team leading award in Gujarat, India</h3>
-                            </div>
+                    </div>
+                    <div className="background mt-10 gap-32">
+                        <div className="educationDiv font-mono">
+                            <h2>Education</h2>
+                            <p>Post Graduation Diploma (2023) GPA - 3.7
+                                Computer Programming</p>
+                            <p>Conestoga College Waterloo, Ontario</p>
+                            <p>Post Graduation Diploma (2020 - 2021) PR - 80%
+                                Math & Computer</p>
+                            <p>Gattu Vidhyalaya, Gujarat, India</p>
+                        </div>
+                        <div className="achievements achievementDiv font-mono border rounded-xl p-2">
+                            <h2>Achievements</h2>
+                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Hackathon at Gujarat Institute of Engineering</h3>
+                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Partcipated in drone Competition of Lions International School</h3>
+                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
+                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Achieved team leading award in Gujarat, India</h3>
                         </div>
                     </div>
                 </div>
