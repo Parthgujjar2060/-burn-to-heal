@@ -174,7 +174,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="background mt-10 gap-32">
+                    <div className="background mt-10 gap-20">
                         <div className="educationDiv font-mono">
                             <h2>Education</h2>
                             <p>Post Graduation Diploma (2023) GPA - 3.7
@@ -184,7 +184,7 @@ const About = () => {
                                 Math & Computer</p>
                             <p>Gattu Vidhyalaya, Gujarat, India</p>
                         </div>
-                        <div className="achievements achievementDiv font-mono border rounded-xl p-2">
+                        <div className="achievementDiv font-mono border rounded-xl p-2">
                             <h2>Achievements</h2>
                             <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Hackathon at Gujarat Institute of Engineering</h3>
                             <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Partcipated in drone Competition of Lions International School</h3>
