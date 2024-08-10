@@ -12,15 +12,25 @@
     overflow-y: auto;
     scrollbar-width: none;
 }
+.background {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;  
+    max-width: 1200px; 
+    margin: 30px auto ;  
+}
 
-.background{
-    display: flex;
-    justify-content: center;
-    width: 500px;     
+.educationDiv {
+    width: auto; 
+    height: max-content;
 }
-.educationDiv{
-   
+
+.achievementDiv {
+    width: auto; 
+    height: max-content;
 }
+
 
 .about-content.visible {
     opacity: 1;
