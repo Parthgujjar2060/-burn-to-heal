@@ -12,23 +12,50 @@
     overflow-y: auto;
     scrollbar-width: none;
 }
+
 .background {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    width: 100%;  
-    max-width: 1200px; 
-    margin: 30px auto ;  
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
 }
 
 .educationDiv {
-    width: auto; 
+    width: auto;
     height: max-content;
 }
 
 .achievementDiv {
-    width: auto; 
-    height: max-content;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements {
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+}
+
+.achievementCard {
+    min-width: 300px;
+    max-width: 300px;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
