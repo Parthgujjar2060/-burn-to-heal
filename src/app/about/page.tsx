@@ -184,12 +184,14 @@ const About = () => {
                                 Math & Computer</p>
                             <p>Gattu Vidhyalaya, Gujarat, India</p>
                         </div>
-                        <div className="achievementDiv font-mono border rounded-xl p-2">
-                            <h2>Achievements</h2>
-                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Hackathon at Gujarat Institute of Engineering</h3>
-                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Partcipated in drone Competition of Lions International School</h3>
-                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Took a part in Hackathon for junior category at Early age in the school coding camps</h3>
-                            <h3 className='border rounded-xl p-2 bg-[#00ABF0]'> # Achieved team leading award in Gujarat, India</h3>
+                    </div>
+                    <div className="achievementDiv font-mono border rounded-xl p-2 overflow-hidden">
+                        <h2>Achievements</h2>
+                        <div className="achievements">
+                            <div className="achievementCard"># Hackathon at Gujarat Institute of Engineering</div>
+                            <div className="achievementCard"># Participated in Drone Competition of Lions International School</div>
+                            <div className="achievementCard"># Took part in Hackathon for junior category at Early age in the school coding camps</div>
+                            <div className="achievementCard"># Achieved team leading award in Gujarat, India</div>
                         </div>
                     </div>
                 </div>
