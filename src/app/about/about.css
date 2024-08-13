@@ -13,6 +13,10 @@
     scrollbar-width: none;
 }
 
+.paragraph {
+    color: rgb(127, 127, 127);
+}
+
 .background {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -25,12 +29,19 @@
 .educationDiv {
     width: auto;
     height: max-content;
+    color: rgb(127, 127, 127);
+}
+
+.educationDiv h2 {
+    color: rgb(127, 127, 127);
 }
 
 .achievementDiv {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    color: rgb(127, 127, 127);
+}
+
+.achievementDiv h2 {
+    color: rgb(127, 127, 127);
 }
 
 .achievements {
@@ -40,12 +51,27 @@
 }
 
 .achievementCard {
+    display: flex;
+    flex-direction: column;
     min-width: 300px;
     max-width: 300px;
     border-radius: 12px;
-    padding: 10px;
+    padding: 15px;
     margin: 0 10px;
-    text-align: center;
+    text-align: left;
+    color: rgb(127, 127, 127);
+    box-shadow: 0 4px 6px rgba(255, 253, 253, 0.1);
+}
+
+.achievementTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.achievementDetails {
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 @keyframes scroll {
@@ -57,7 +83,6 @@
         transform: translateX(-100%);
     }
 }
-
 
 .about-content.visible {
     opacity: 1;
@@ -165,7 +190,6 @@ h2 {
     font-size: 24px;
     margin-bottom: 15px;
 }
-
 
 svg {
     margin-bottom: 15px;
