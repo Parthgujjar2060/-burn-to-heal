@@ -96,7 +96,7 @@ const About = () => {
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
-                        <div className="">
+                        <div className="paragraph">
                             <p>{data.paragraph}</p>
                         </div>
                     </div>
@@ -188,12 +188,25 @@ const About = () => {
                     <div className="achievementDiv font-mono border rounded-xl p-2 overflow-hidden">
                         <h2>Achievements</h2>
                         <div className="achievements">
-                            <div className="achievementCard"># Hackathon at Gujarat Institute of Engineering</div>
-                            <div className="achievementCard"># Participated in Drone Competition of Lions International School</div>
-                            <div className="achievementCard"># Took part in Hackathon for junior category at Early age in the school coding camps</div>
-                            <div className="achievementCard"># Achieved team leading award in Gujarat, India</div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Hackathon at Gujarat Institute of Engineering</span>
+                                <span className="achievementDetails">- Participated and won 2nd place in a state-level hackathon, developing an innovative solution for smart traffic management using AI and IoT.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Participated in Drone Competition of Lions International School</span>
+                                <span className="achievementDetails">- Designed and built a custom drone from scratch, showcasing advanced flight maneuvers and securing a spot in the top 5 teams.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Hackathon for Junior Category at Early Age</span>
+                                <span className="achievementDetails">- Engaged in early coding camps, where I led a team to develop a simple but effective web application, earning recognition for teamwork and innovation.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Achieved Team Leading Award in Gujarat, India</span>
+                                <span className="achievementDetails">- Recognized for exemplary leadership in a regional competition, coordinating a team of 10 members to complete a project ahead of schedule with excellent results.</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             )}
         </div>
