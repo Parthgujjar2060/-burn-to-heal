@@ -179,19 +179,18 @@ const About = () => {
                             <h2 className="font-mono">Education</h2>
                             <div className="educationDiv font-mono">
                                 <div className='ed1'>
-                                    <p>Post Graduation Diploma (2023) GPA - 3.7
-                                        Computer Programming</p>
+                                    <p># Post Graduation Diploma (2024) GPA - 3.7 Computer Programming</p>
                                     <p>Conestoga College Waterloo, Ontario</p>
                                 </div>
                                 <div className='ed2'>
-                                    <p>Post Graduation Diploma (2020 - 2021) PR - 80%
+                                    <p># Post Graduation Diploma (2020 - 2021) PR - 80%
                                         Math & Computer</p>
                                     <p>Gattu Vidhyalaya, Gujarat, India</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="achievementDiv font-mono border rounded-xl p-2 overflow-hidden">
+                    <div className="achievementDiv font-mono overflow-hidden">
                         <h2>Achievements</h2>
                         <div className="achievements">
                             <div className="achievementCard">
