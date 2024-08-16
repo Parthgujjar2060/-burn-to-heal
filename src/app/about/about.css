@@ -267,6 +267,7 @@ svg {
         max-height: 650px;
     }
 
+    
     .educationDiv {
         display: grid;
         grid-template-columns: 1fr;
