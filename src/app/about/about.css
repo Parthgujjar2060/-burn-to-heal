@@ -52,6 +52,7 @@
 .achievements {
     display: flex;
     width: max-content;
+    background-color: transparent;
     /* animation: scroll 10s linear infinite; */
 }
 
@@ -65,7 +66,6 @@
     margin: 0 10px;
     text-align: left;
     color: rgb(165, 165, 165);
-    box-shadow: 0 6px 10px rgba(255, 253, 253, 0.1);
 }
 
 .achievementTitle {
@@ -220,7 +220,6 @@ svg {
     .achievements,
     .primary-interest {
         grid-column: span 2;
-        background-color: #161b2f;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -267,7 +266,6 @@ svg {
         max-height: 650px;
     }
 
-    
     .educationDiv {
         display: grid;
         grid-template-columns: 1fr;
@@ -286,7 +284,7 @@ svg {
         width: 94%;
     }
 
-    .ed2{
+    .ed2 {
         width: 94%;
     }
 
