@@ -1,8 +1,4 @@
-@media (max-width: 768px) {
-    .navbar {
-        display: none !important;
-    }
-}
+ 
 
 .accessibility-controller {
     width: 0.5cm;
@@ -28,9 +24,11 @@
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -78,7 +76,7 @@
 
 .link-home {
     transform: translate(-30px, -40px);
-    
+
 }
 
 .link-about {
@@ -91,4 +89,67 @@
 
 .link-contact {
     transform: translate(40px, 30px);
+ aboutpage
+}
+
+
+@media (min-width: 1441px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .about-content {
+        max-width: 1150px;
+        max-height: 750px;
+    }
+}
+
+@media (max-width: 982px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievements,
+    .primary-interest {
+        grid-column: span 2;
+        background-color: #00ABF0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 750px;
+        max-height: 750px;
+    }
+
+    .achievements h3,
+    .primary-interest h3 {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1540px) {
+     
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+@media (max-width: 768px) {
+    .logo{
+        margin-left: 20px;
+    }
+    .contact{
+        margin-right: 20px;
+    }
+
+    .navbar {
+        display: none !important;
+    }
+ main
 }

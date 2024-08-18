@@ -92,11 +92,11 @@ const About = () => {
     }, []);
 
     return (
-        <div className="about-container">
+        <div className="about-container font-mono">
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
-                        <div className="border">
+                        <div className="">
                             <p>{data.paragraph}</p>
                         </div>
                     </div>
@@ -172,6 +172,26 @@ const About = () => {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    <div className="background mt-10 gap-20">
+                        <div className="educationDiv font-mono">
+                            <h2>Education</h2>
+                            <p>Post Graduation Diploma (2023) GPA - 3.7
+                                Computer Programming</p>
+                            <p>Conestoga College Waterloo, Ontario</p>
+                            <p>Post Graduation Diploma (2020 - 2021) PR - 80%
+                                Math & Computer</p>
+                            <p>Gattu Vidhyalaya, Gujarat, India</p>
+                        </div>
+                    </div>
+                    <div className="achievementDiv font-mono border rounded-xl p-2 overflow-hidden">
+                        <h2>Achievements</h2>
+                        <div className="achievements">
+                            <div className="achievementCard"># Hackathon at Gujarat Institute of Engineering</div>
+                            <div className="achievementCard"># Participated in Drone Competition of Lions International School</div>
+                            <div className="achievementCard"># Took part in Hackathon for junior category at Early age in the school coding camps</div>
+                            <div className="achievementCard"># Achieved team leading award in Gujarat, India</div>
                         </div>
                     </div>
                 </div>
