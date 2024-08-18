@@ -89,6 +89,7 @@
 
 .link-contact {
     transform: translate(40px, 30px);
+ aboutpage
 }
 
 
@@ -150,4 +151,5 @@
     .navbar {
         display: none !important;
     }
+ main
 }
