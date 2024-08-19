@@ -53,7 +53,7 @@
     display: flex;
     width: max-content;
     background-color: transparent;
-    /* animation: scroll 10s linear infinite; */
+    animation: scroll 10s linear infinite;
 }
 
 .achievementCard {
@@ -63,7 +63,7 @@
     max-width: 300px;
     border-radius: 12px;
     padding: 15px;
-    margin: 0 10px;
+    margin: 0px 10px 0 0px;
     text-align: left;
     color: rgb(165, 165, 165);
 }
