@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import AvocationComp from "../component/avocationComp";
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
