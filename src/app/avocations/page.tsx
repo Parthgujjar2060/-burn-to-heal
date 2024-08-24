@@ -36,7 +36,7 @@ const Avocations: React.FC = () => {
             <div style={{ display: 'grid', gap: '10px' }}>
                 <AvocationComp
                     avocation="Volley ball"
-                    description= ""
+                    description=""
                     icon={<span role="img" aria-label="books">📚</span>}
                 />
                 <AvocationComp
@@ -50,7 +50,12 @@ const Avocations: React.FC = () => {
                     icon={<span role="img" aria-label="camera">📷</span>}
                 />
             </div>
+            <div className='scrol'>
+                <h3>Roll up to Find More about me</h3>
+            </div>
         </div>
+
+
     );
 };
 
