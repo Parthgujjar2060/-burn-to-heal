@@ -4,8 +4,9 @@ import AvocationComp from "../component/avocationComp";
 const Avocations: React.FC = () => {
     return (
         <div>
-            <h1>Avocations</h1>
-            <p>Welcome to the avocations page</p>
+
+            <h1>Welcome to Avocations boolating</h1>
+            <h3>Here you will find my hobbies</h3>
 
             <div style={{ display: 'grid', gap: '10px' }}>
                 <AvocationComp
