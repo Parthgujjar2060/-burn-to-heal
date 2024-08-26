@@ -8,7 +8,7 @@ const Avocations: React.FC = () => {
 
     interface AvocationData {
         description: string;
-        image: string; // Assuming image is a URL string
+        image: string;
     }
 
     const [avocationData, setAvocationData] = useState<{ [key: string]: AvocationData } | null>(null);
