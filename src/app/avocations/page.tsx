@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AvocationComp from "../component/avocationComp";
 import { ref, get } from 'firebase/database';
 import { database } from '@/app/DbSetUp/firebase';
+import '../avocations/avocation.css';
 
 const Avocations: React.FC = () => {
 
@@ -32,46 +33,44 @@ const Avocations: React.FC = () => {
 
     return (
         <div>
-            <h1>Welcome to Avocations boolating</h1>
+            <h1>Welcome to Avocations</h1>
             <h3>Here you will find my hobbies</h3>
+            <div className='grid grid-cols-2 gap-4'>
+                <div className='single-image-container'>
+                    {avocationData && avocationData["volleyball"]?.image && (
+                        <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
+                    )}
+                </div>
+                <div className='info-container'>
+                    {avocationData && (
+                        <>
+                            <div className='avocation-wrapper'>
+                                <span className='shining-line'></span>
+                                <AvocationComp
+                                    avocation="Volleyball"
+                                    description={avocationData["volleyball"]?.description || "No description available"}
+                                />
+                            </div>
+                            <div className='avocation-wrapper'>
+                                <span className='shining-line'></span>
+                                <AvocationComp
+                                    avocation="Foodie"
+                                    description={avocationData["Food"]?.description || "No description available"}
+                                />
+                            </div>
 
-            <div>
-                {avocationData && avocationData["volleyball"]?.image ? (
-                    <img src={avocationData["volleyball"].image} alt="Volleyball" />
-                ) : (
-                    "No image available"
-                )}
-                {avocationData && avocationData["Gaming"]?.image ? (
-                    <img src={avocationData["Gaming"].image} alt="Gaming" />
-                ) : (
-                    "No image available"
-                )}
-                {avocationData && avocationData["Food"]?.image ? (
-                    <img src={avocationData["Food"].image} alt="Food" />
-                ) : (
-                    "No image available"
-                )}
+                            <div className='avocation-wrapper'>
+                                <span className='shining-line'></span>
+                                <AvocationComp
+                                    avocation="Gaming"
+                                    description={avocationData["Gaming"]?.description || "No description available"}
+                                />
+                            </div>
+                        </>
+                    )}
+                </div>
             </div>
-            <div style={{ display: 'grid', gap: '10px' }}>
-                {avocationData && (
-                    <>
-                        <AvocationComp
-                            avocation="Volleyball"
-                            description={avocationData["volleyball"]?.description || "No description available"}
-                        />
-                        <AvocationComp
-                            avocation="Foddieeeeeee"
-                            description={avocationData["foodie"]?.description || "No description available"}
-                            icon={<span role="img" aria-label="food">🍔</span>}
-                        />
-                        <AvocationComp
-                            avocation="Gaming"
-                            description={avocationData["gaming"]?.description || "No description available"}
-                            icon={<span role="img" aria-label="gaming">🎮</span>}
-                        />
-                    </>
-                )}
-            </div>
+
             <div className='scrol'>
                 <h3>Roll up to Find More about me</h3>
             </div>
