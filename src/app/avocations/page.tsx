@@ -35,7 +35,7 @@ const Avocations: React.FC = () => {
         <div>
             <h1>Welcome to Avocations</h1>
             <h3>Here you will find my hobbies</h3>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '40% 40% 10%' }}>
                 <div className='single-image-container'>
                     {avocationData && avocationData["volleyball"]?.image && (
                         <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
@@ -58,7 +58,6 @@ const Avocations: React.FC = () => {
                                     description={avocationData["Food"]?.description || "No description available"}
                                 />
                             </div>
-
                             <div className='avocation-wrapper'>
                                 <span className='shining-line'></span>
                                 <AvocationComp
@@ -69,10 +68,9 @@ const Avocations: React.FC = () => {
                         </>
                     )}
                 </div>
-            </div>
-
-            <div className='scrol'>
-                <h3>Roll up to Find More about me</h3>
+                <div className='scrol'>
+                    <h3>Roll up to Find More about me</h3>
+                </div>
             </div>
         </div>
     );
