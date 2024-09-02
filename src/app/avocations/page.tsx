@@ -35,7 +35,7 @@ const Avocations: React.FC = () => {
         <div>
             <h1>Welcome to Avocations</h1>
             <h3>Here you will find my hobbies</h3>
-            <div className=' grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%'}}>
+            <div className=' grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%' }}>
                 <div className='single-image-container'>
                     {avocationData && avocationData["volleyball"]?.image && (
                         <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
@@ -69,7 +69,7 @@ const Avocations: React.FC = () => {
                     )}
                 </div>
                 <div className='scrol'>
-                    <h3>Roll up to Find More about me</h3>
+                    <h3>Scroll Down</h3>
                 </div>
             </div>
         </div>
