@@ -69,7 +69,6 @@ const Avocations: React.FC = () => {
                     )}
                 </div>
                 <div className='scrol'>
-                    <h3></h3>
                 </div>
             </div>
         </div>
