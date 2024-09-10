@@ -35,7 +35,7 @@ const Avocations: React.FC = () => {
         <div>
             <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
             <h3 style={{ fontSize: '1.5rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
-            <div className=' grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%' }}>
+            <div className='grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%' }}>
                 <div className='single-image-container'>
                     {avocationData && avocationData["volleyball"]?.image && (
                         <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
