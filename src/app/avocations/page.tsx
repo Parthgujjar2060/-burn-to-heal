@@ -38,7 +38,7 @@ const Avocations: React.FC = () => {
             <div className='grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%' }}>
                 <div className='single-image-container'>
                     {avocationData && avocationData["volleyball"]?.image && (
-                        <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
+                        <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image"/>
                     )}
                 </div>
                 <div className='info-container'>
