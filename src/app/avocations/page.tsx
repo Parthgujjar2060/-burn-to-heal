@@ -13,7 +13,6 @@ const Avocations: React.FC = () => {
     }
 
     const [avocationData, setAvocationData] = useState<{ [key: string]: AvocationData } | null>(null);
-    const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     useEffect(() => {
         const avocationRef = ref(database, 'avocation');
@@ -32,8 +31,6 @@ const Avocations: React.FC = () => {
 
     }, []);
 
-    const handleScroll = (event: React.WheelEvent) => {
-    };
     return (
         <div>
             <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
@@ -41,9 +38,17 @@ const Avocations: React.FC = () => {
             <div className='grid grid-cols-3 gap-4' style={{ gridTemplateColumns: '45% 45% 5%' }}>
                 <div className='single-image-container'>
                     {avocationData && avocationData["volleyball"]?.image && (
-                        <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image"/>
+                        <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
+                    )}
+                    {avocationData && avocationData["volleyball"]?.image && (
+                        <img src={avocationData["Gaming"].image} alt="Volleyball" className="avocation-image" />
+                    )}
+
+                    {avocationData && avocationData["volleyball"]?.image && (
+                        <img src={avocationData["Food"].image} alt="Volleyball" className="avocation-image" />
                     )}
                 </div>
+
                 <div className='info-container'>
                     {avocationData && (
                         <>
