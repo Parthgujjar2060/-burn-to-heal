@@ -41,11 +41,10 @@ const Avocations: React.FC = () => {
                         <img src={avocationData["volleyball"].image} alt="Volleyball" className="avocation-image" />
                     )}
                     {avocationData && avocationData["volleyball"]?.image && (
-                        <img src={avocationData["Gaming"].image} alt="Volleyball" className="avocation-image" />
-                    )}
-
-                    {avocationData && avocationData["volleyball"]?.image && (
                         <img src={avocationData["Food"].image} alt="Volleyball" className="avocation-image" />
+                    )}
+                    {avocationData && avocationData["volleyball"]?.image && (
+                        <img src={avocationData["Gaming"].image} alt="Volleyball" className="avocation-image" />
                     )}
                 </div>
 
@@ -72,7 +71,6 @@ const Avocations: React.FC = () => {
                                     avocation="Gaming"
                                     description={avocationData["Gaming"]?.description || "No description available"}
                                 />
-                                
                             </div>
                         </>
                     )}
@@ -80,7 +78,6 @@ const Avocations: React.FC = () => {
                 <div className="scrol">
                     <div className="scroll-line"></div>
                 </div>
-
             </div>
         </div>
     );
