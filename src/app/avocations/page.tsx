@@ -72,6 +72,7 @@ const Avocations: React.FC = () => {
                                     avocation="Gaming"
                                     description={avocationData["Gaming"]?.description || "No description available"}
                                 />
+                                
                             </div>
                         </>
                     )}
