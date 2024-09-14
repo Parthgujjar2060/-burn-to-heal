@@ -1,5 +1,5 @@
 .grid {
-    height: 80vh;
+    height: 70vh;
     display: grid;
     grid-template-columns: 45% 45% 5%;
     gap: 4%;
@@ -10,12 +10,12 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .avocation-image {
-    width: 60%;
-    height: 80%;
+    width: 100vh;
+    height: 40vh;
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -24,7 +24,8 @@
 .info-container {
     display: grid;
     gap: 10px;
-    height: 100%;
+    height: 70vh;
+    overflow-y: auto;
 }
 
 .avocation-wrapper {
@@ -63,7 +64,6 @@
     0% {
         height: 0;
     }
-
     100% {
         height: 70%;
     }
@@ -73,11 +73,9 @@
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
