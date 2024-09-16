@@ -47,7 +47,6 @@ const Avocations: React.FC = () => {
                         <img src={avocationData["Gaming"].image} alt="Volleyball" className="avocation-image" />
                     )}
                 </div>
-
                 <div className='info-container'>
                     {avocationData && (
                         <>
