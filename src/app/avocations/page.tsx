@@ -30,7 +30,7 @@ const Avocations: React.FC = () => {
         });
 
     }, []);
-
+// Need to work on the scrolling effect....
     return (
         <div>
             <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
