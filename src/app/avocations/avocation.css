@@ -24,7 +24,7 @@
 .info-container {
     display: grid;
     gap: 10px;
-    height: 70vh;
+    height: 40vh;
     overflow-y: auto;
     position: relative;
 }
