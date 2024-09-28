@@ -125,19 +125,23 @@
     .info-container {
         height: 35vh;
     }
+
 }
 
 /* Small screens (phones, below 768px) */
 @media (max-width: 767px) {
     .grid {
-        grid-template-columns: 100%;
-        gap: 2%;
+        grid-template-columns: 70%;
+        grid-row: 1fr;
+        gap: 1%;
     }
     .avocation-image {
-        width: 70%;
+        margin-top: 20px;
+        width: 80%;
         height: 30vh;
     }
     .info-container {
-        height: 30vh;
+        margin-top: 13px;
+        height: 32vh;
     }
 }
