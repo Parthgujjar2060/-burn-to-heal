@@ -77,7 +77,6 @@ const Avocations: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Scroll indicator */}
                 <div className="scrol">
                     <div className="scroll-line"></div>
                 </div>
