@@ -66,7 +66,7 @@ const Avocations: React.FC = () => {
                         <div
                             key={key}
                             className='avocation-wrapper'
-                            ref={(el) => { sectionRefs.current[index] = el; }} // Assign ref for each section
+                            ref={(el) => { sectionRefs.current[index] = el; }}
                         >
                             <span className='shining-line'></span>
                             <AvocationComp
