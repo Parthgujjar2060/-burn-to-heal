@@ -49,7 +49,7 @@ const Avocations: React.FC = () => {
             <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
             <h3 style={{ fontSize: '1rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
             <div className='grid' style={{ gridTemplateColumns: '45% 45% 5%' }}>
-                {/* Left Side: Show active image */}
+
                 <div className='single-image-container'>
                     {avocationData && activeKey && avocationData[activeKey]?.image && (
                         <img
@@ -60,7 +60,6 @@ const Avocations: React.FC = () => {
                     )}
                 </div>
 
-                {/* Right Side: Scrollable descriptions */}
                 <div className='info-container' onScroll={handleScroll}>
                     {avocationData && avocationKeys.map((key, index) => (
                         <div
