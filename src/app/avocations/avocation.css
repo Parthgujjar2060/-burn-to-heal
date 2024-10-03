@@ -24,15 +24,17 @@
 .info-container {
     display: grid;
     gap: 10px;
-    height: 40vh;
+    height: 80vh;
     overflow-y: auto;
     position: relative;
 }
 
 .avocation-wrapper {
-    width: fit-content;
+    display: grid;
+    width: 60vh;
+    height: 59vh;
     margin: 0 auto;
-    height: 100%;
+    display: grid;
 }
 
 .shining-line {
@@ -95,7 +97,10 @@
         height: 75vh;
     }
     .info-container {
-        height: 45vh;
+        
+        margin: 0 auto;
+        height: 60vh;
+        width: 80vh;
     }
 }
 
@@ -123,7 +128,7 @@
         height: 65vh;
     }
     .info-container {
-        height: 35vh;
+        height: 65vh;
     }
 
 }
