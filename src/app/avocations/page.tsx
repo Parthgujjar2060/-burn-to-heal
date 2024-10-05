@@ -32,7 +32,6 @@ const Avocations: React.FC = () => {
             });
     }, []);
 
-    // Function to determine which section is in view
     const handleScroll = () => {
         sectionRefs.current.forEach((section, index) => {
             if (section) {
