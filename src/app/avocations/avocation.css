@@ -38,6 +38,10 @@
     display: grid;
 }
 
+.line{
+    margin-bottom: 20px;
+}
+
 .shining-line {
     display: block;
     width: 100%;
