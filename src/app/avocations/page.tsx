@@ -66,11 +66,17 @@ const Avocations: React.FC = () => {
                             className='avocation-wrapper'
                             ref={(el) => { sectionRefs.current[index] = el; }}
                         >
-                            <span className='shining-line'></span>
-                            <AvocationComp
-                                avocation={key}
-                                description={avocationData[key]?.description || "No description available"}
-                            />
+                            <div>
+                                <div className='line'>
+                                    <span className='shining-line'></span>
+                                </div>
+                                <div className='component'>
+                                    <AvocationComp
+                                        avocation={key}
+                                        description={avocationData[key]?.description || "No description available"}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
