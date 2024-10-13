@@ -5,3 +5,25 @@
 .description{
      
 }
+
+/* Extra Large screens (desktops, 1400px and above) */
+@media (min-width: 1400px) {
+
+}
+
+/* Large screens (desktops, between 1200px and 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+
+}
+
+/* Medium screens (tablets, between 768px and 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+   
+}
+
+/* Small screens (phones, below 768px) */
+@media (max-width: 767px) {
+    .avocationBox {
+        width: 40vh;
+        height: 20vh;}
+}
