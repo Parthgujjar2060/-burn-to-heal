@@ -17,7 +17,11 @@
 
 /* Medium screens (tablets, between 768px and 1199px) */
 @media (max-width: 1199px) and (min-width: 768px) {
-    
+    .avocationBox {
+        width: 350px;
+        height: 10vh;
+        margin: 0 auto;
+    }
 }
 
 /* Small screens (phones, below 768px) */
@@ -25,7 +29,7 @@
     
     .avocationBox {
         width: 40vh;
-        height: 20vh;
+        height: 10vh;
         margin: 0 auto;
     }
 }
