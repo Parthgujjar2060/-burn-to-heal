@@ -131,10 +131,7 @@
     .grid {
         grid-template-columns: 100%;
     }
-    .avocation-image {
-        width: 100vh;
-        height: 65vh;
-    }
+    
     .info-container {
         height: 65vh;
     }
