@@ -37,7 +37,7 @@ const Avocations: React.FC = () => {
             if (section) {
                 const rect = section.getBoundingClientRect();
                 if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                    setActiveKey(avocationKeys[index]); // Update the active key based on scroll position
+                    setActiveKey(avocationKeys[index]);
                 }
             }
         });
@@ -47,8 +47,7 @@ const Avocations: React.FC = () => {
         <div>
             <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
             <h3 style={{ fontSize: '1rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
-            <div className='grid' style={{ gridTemplateColumns: '45% 45% 5%' }}>
-
+            <div className='grid' style={{ gridTemplateColumns: '45% 45% 10%' }}>
                 <div className='single-image-container'>
                     {avocationData && activeKey && avocationData[activeKey]?.image && (
                         <img
