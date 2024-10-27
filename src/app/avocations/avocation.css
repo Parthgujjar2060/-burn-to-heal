@@ -171,6 +171,7 @@ html {
         height: 3px;
     }
 }
+
 /* Small screens (phones, below 768px) */
 @media (max-width: 767px) {
     .grid {
