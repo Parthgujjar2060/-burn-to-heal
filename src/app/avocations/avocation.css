@@ -1,6 +1,7 @@
 body,
 html {
     overflow-x: hidden;
+    overflow-y: hidden;
     max-width: 100vw;
     max-height: 100vh;
     margin: 0;
@@ -148,26 +149,39 @@ html {
         grid-template-rows: auto;
         gap: 1%;
         max-width: 100vw;
+        height: 50vh;
         overflow: hidden;
+        margin: 20px 30px 0 20px;
     }
 
     .avocation-image {
         width: 100%;
-        height: auto;
+        height: 40vh;
     }
 
     .info-container {
         height: 65vh;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 10px;
         overflow-y: auto;
         overflow-x: hidden;
+        scrollbar-width: none;
+
     }
+    
+    .info-container::-webkit-scrollbar {
+        display: none;
+    }
+    
 
     .shining-line {
         width: 69%;
-        margin-left: 25px;
+        margin-left: 10px;
         height: 3px;
+    }
+
+    .scrol {
+        margin: 0 auto;
     }
 }
 
@@ -183,12 +197,14 @@ html {
     .avocation-image {
         margin-top: 20px;
         width: 80%;
-        height: 30vh;
+        height: 35vh;
     }
 
     .info-container {
         margin-top: 13px;
-        height: 32vh;
+        height: 350vh;
         width: 100%;
+        margin: 0 100px 1000px auto;
+        overflow-x: hidden;
     }
 }
