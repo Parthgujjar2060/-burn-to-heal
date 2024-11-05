@@ -45,8 +45,8 @@ const Avocations: React.FC = () => {
 
     return (
         <div>
-            <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
-            <h3 style={{ fontSize: '1rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
+            <h1 style={{ fontSize: '2.2rem', marginTop: "60px", fontFamily:"monospace" }}>Welcome to Avocations</h1>
+            <h3 style={{ fontSize: '1.2rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
             <div className='grid' style={{ gridTemplateColumns: '45% 45% 10%' }}>
                 <div className='single-image-container'>
                     {avocationData && activeKey && avocationData[activeKey]?.image && (
