@@ -119,7 +119,7 @@ html {
         height: 60vh;
         width: 80vh;
     }
-    
+
 
     .shining-line {
         width: 51vh;
@@ -167,9 +167,8 @@ html {
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: none;
-
     }
-    
+
     .info-container::-webkit-scrollbar {
         display: none;
     }
@@ -183,6 +182,7 @@ html {
 
     .scrol {
         margin: 0 auto;
+        height: 58vh;
     }
 }
 
