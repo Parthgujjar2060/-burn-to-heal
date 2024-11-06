@@ -58,6 +58,7 @@ const Avocations: React.FC = () => {
                     )}
                 </div>
 
+
                 <div className='info-container' onScroll={handleScroll}>
                     {avocationData && avocationKeys.map((key, index) => (
                         <div
