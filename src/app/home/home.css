@@ -73,6 +73,7 @@ body {
     .main-container {
         display: grid;
         gap: 50px;
+        
     }
 }
 
