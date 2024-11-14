@@ -105,7 +105,6 @@ body {
     .tagline {
         width: max-content;
         margin: 0 auto 10px auto;
-
         grid-row-gap: 100px;
         margin-top: -100px;
         margin-right: 0px;
