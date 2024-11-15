@@ -142,8 +142,9 @@ body {
         display: none;
     }
 
-    .body {
-        height: 100vh;
+    .main{
+        width: max-content;
+        
     }
 
     .main-container {
