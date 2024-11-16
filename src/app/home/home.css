@@ -56,15 +56,9 @@ body {
         width: max-content;
         margin: 0 auto;
     }
-
-    .parthimage {
-        width: 50%;
-        width:max-content;
-        margin: 0 auto;
-    }
   
     .parthimage {
-        width: 80%;
+        width: 70%;
         border-radius: 50%;
         border: 4px solid #00ABF0;
         margin: 0 auto;
@@ -124,8 +118,7 @@ body {
     }
 
     .parthimage {
-        width: 80%;
-        width: 100%;
+        width: 50%;
         height: 100%;
         border-radius: 50%;
         border: 4px solid #00ABF0;
@@ -185,7 +178,7 @@ body {
     }
 
     .parthimage {
-        width: 80%;
+        width: 30%;
         height: 50%;
         border-radius: 50%;
         border: 4px solid #00ABF0;
@@ -214,7 +207,6 @@ body {
         margin-top: 30px;
         margin-right: 0px;
         margin-left: 85px;
-        height: max-content;
     }
 
     .name {
@@ -244,8 +236,7 @@ body {
     }
 
     .parthimage {
-        width: 80%;
-        width: 100%;
+        width: 50%;
         height: 100%;
         border-radius: 50%;
         border: 4px solid #00ABF0;
