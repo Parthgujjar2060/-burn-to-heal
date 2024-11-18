@@ -80,7 +80,7 @@ const Home: React.FC = () => {
         <div className="main">
             <div className="flex items-center pb-28 h-screen">
                 <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
-                    <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
+                    <div className='flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
                         <div className="name mr-60">
                             <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                         <div className='ring'>
                         {homeData && (
                             <div className="flex justify-center items-center">
-                                <div className="w-full h-full border-3 border-blue-500 overflow-hidden">
+                                <div className="w-full h-fulloverflow-hidden">
                                     <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ objectFit: 'cover' }} />
                                 </div>
                             </div>
