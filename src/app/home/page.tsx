@@ -89,7 +89,6 @@ const Home: React.FC = () => {
                                 {Array.from("a Full Stack Developer").map((char, i) => (
                                     <span
                                         key={i}
-                                        className={`text-blue-500 animate-reveal delay-${i * 3} text-4xl m-3`}
                                     >{char}
                                     </span>
                                 ))}
