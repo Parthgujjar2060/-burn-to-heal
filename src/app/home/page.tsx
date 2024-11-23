@@ -94,7 +94,6 @@ const Home: React.FC = () => {
                                 ))}
                             </p>
                         </div>
-
                         <div>
                             <p className="paragraph w-96" style={{ width: "410px" }}>
                                 Full-Stack Developer with ability to learn and collaborate
