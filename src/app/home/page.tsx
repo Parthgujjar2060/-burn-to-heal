@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                         <div className='ring'>
                         {homeData && (
                             <div className="flex justify-center items-center">
-                                <div className="w-full h-full border-3 border-blue-500 overflow-hidden">
+                                <div className="w-full h-full overflow-hidden">
                                     <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ objectFit: 'cover' }} />
                                 </div>
                             </div>
