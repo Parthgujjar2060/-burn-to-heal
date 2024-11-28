@@ -101,14 +101,14 @@ const Home: React.FC = () => {
                             </p>
                         </div>
                         <div className="grid grid-cols-2 mt-5" style={{ gap: "140px" }}>
-                            <div className="">
+                            <div>
                                 <Link href="/contact">
-                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
+                                    <button className="contactButton">Let&apos;s Talk</button>
                                 </Link>
                             </div>
                             <div className="flex gap-2">
                                 {links && Object.entries(links).map(([platform, url]) => (
-                                    <div key={platform} className="">
+                                    <div key={platform}>
                                         <a href={url} target="_blank">
                                             <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
                                         </a>
