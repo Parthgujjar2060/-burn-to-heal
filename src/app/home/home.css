@@ -12,6 +12,30 @@ body {
     align-items: center;
     background-color: #01204b;
 }
+.contactButton {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contactButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 40%);
+    transform: translate(-50%, -100%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  .contactButton:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+
 
 .logo {
     position: absolute;
@@ -160,9 +184,7 @@ body {
         width: max-content;
         margin: 0 auto 20px auto;
         grid-row-gap: 100px;
-        margin-top: -10px;
-        margin-right: 100px;
-        margin-left: 85px;
+        margin: 0 auto 20px auto;
     }
 
     .main-container> :first-child {
