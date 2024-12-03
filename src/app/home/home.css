@@ -16,25 +16,52 @@ body {
 .contactButton {
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
   .contactButton::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 40%);
-    transform: translate(-50%, -100%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    opacity: 0.6;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.3s ease-in-out;
+    animation: none;
+    opacity: 0;
     pointer-events: none;
   }
   
   .contactButton:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+    animation: waterWave 1s ease-out;
+    opacity: 1;
   }
+  
+  @keyframes waterWave {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+  
 
 
 .logo {
