@@ -31,33 +31,29 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 30%, transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: opacity 0.3s ease-in-out;
-    animation: none;
-    opacity: 0;
     pointer-events: none;
   }
   
   .contactButton:hover::before {
-    animation: waterWave 1s ease-out;
-    opacity: 1;
+    animation: waterRipple 1.2s infinite ease-out;
   }
   
-  @keyframes waterWave {
+  @keyframes waterRipple {
     0% {
       transform: translate(-50%, -50%) scale(0);
       opacity: 0.6;
     }
     50% {
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1.5);
       opacity: 0.3;
     }
     100% {
-      transform: translate(-50%, -50%) scale(2);
+      transform: translate(-50%, -50%) scale(3);
       opacity: 0;
     }
   }
