@@ -118,7 +118,6 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex justify-center items-center">
-                        <div className='ring'>
                         {homeData && (
                             <div className="flex justify-center items-center">
                                 <div className="w-full h-fulloverflow-hidden">
@@ -126,7 +125,6 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                         )}
-                        </div>
                     </div>
 
                 </div>
