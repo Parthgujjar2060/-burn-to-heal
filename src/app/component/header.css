@@ -91,9 +91,7 @@
 
 .link-contact {
     transform: translate(40px, 30px);
- aboutpage
 }
-
 
 @media (min-width: 1441px) {
     .grid-container {
@@ -139,8 +137,6 @@
 @media (min-width: 769px) and (max-width: 1024px) {}
 
 @media (max-width: 768px) {
-    .logo {}
-
     .contact {
         margin-right: 20px;
     }
@@ -148,5 +144,4 @@
     .navbar {
         display: none !important;
     }
- main
 }
