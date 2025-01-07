@@ -89,14 +89,23 @@ body {
     .devimage {
         display: none;
     }
+    
+    .main-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+        margin-top: 30px;
+        margin-right: 0px;
+        margin-left: 85px;
+        height: max-content;
+    }
 
-  homepage
     .name {
         width: 70%;
         margin: 0 auto;
     }
 
-  homepage
     .tagline {
         width: max-content;
         margin: 0 auto;
