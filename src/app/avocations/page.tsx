@@ -12,9 +12,9 @@ const Avocations: React.FC = () => {
     }
 
     const [avocationData, setAvocationData] = useState<{ [key: string]: AvocationData } | null>(null);
-    const [activeKey, setActiveKey] = useState<string>("volleyball"); // Active avocation key
-    const avocationKeys = ["volleyball", "Food", "Gaming"]; // Array of avocation keys
-    const sectionRefs = useRef<Array<HTMLDivElement | null>>([]); // Refs for each section
+    const [activeKey, setActiveKey] = useState<string>("volleyball"); 
+    const avocationKeys = ["volleyball", "Food", "Gaming"];  
+    const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
 
     useEffect(() => {
         const avocationRef = ref(database, 'avocation');
