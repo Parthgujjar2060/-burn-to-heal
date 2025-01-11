@@ -80,6 +80,7 @@ const Avocations: React.FC = () => {
                     ))}
                 </div>
 
+
                 <div className="scrol">
                     <div className="scroll-line"></div>
                 </div>
