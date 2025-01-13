@@ -1,7 +1,9 @@
 .about-container {
     height: 100%;
     width: 100%;
+    margin-top: 50px;
     box-sizing: border-box;
+
 }
 
 .about-content {
@@ -10,6 +12,81 @@
     animation: slideInFromLeft 1.5s ease-in-out;
     max-height: 650px;
     overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.paragraph {
+    color: rgb(127, 127, 127);
+}
+
+.background {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.educationDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: max-content;
+    height: max-content;
+    color: rgb(165, 165, 165);
+}
+
+.educationDiv h2 {
+    color: rgb(165, 165, 165);
+}
+
+.achievementDiv {
+    color: rgb(165, 165, 165);
+}
+
+.achievementDiv h2 {
+    color: rgb(165, 165, 165);
+}
+
+.achievements {
+    display: flex;
+    width: max-content;
+    background-color: transparent;
+    animation: scroll 10s linear infinite;
+}
+
+.achievementCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 0px 10px 0 0px;
+    text-align: left;
+    color: rgb(165, 165, 165);
+}
+
+.achievementTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.achievementDetails {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .about-content.visible {
@@ -67,11 +144,15 @@
 }
 
 .skills {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.skills li {
     margin: 0;
-    padding: 0;
-    list-style: none;
-    color: #fff;
-    font-size: 16px;
+    padding-left: 1.5rem;
+    text-align: left;
 }
 
 .otherDiv,
@@ -119,28 +200,26 @@ svg {
     margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto;
     }
 
+    .about-content {
+        max-width: 1150px;
+        max-height: 750px;
+    }
+}
+
+@media (max-width: 982px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .achievements,
     .primary-interest {
-        grid-column: span 3;
-        background-color: #00ABF0;
+        grid-column: span 2;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -148,8 +227,103 @@ svg {
         text-align: center;
     }
 
+    .about-content {
+        max-width: 750px;
+        max-height: 750px;
+    }
+
     .achievements h3,
     .primary-interest h3 {
         margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1540px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-content {
+        max-width: 1100px;
+        max-height: 650px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        padding: 35px;
+        max-width: 600px;
+        max-height: 650px;
+    }
+
+    .educationDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: max-content;
+        height: max-content;
+        color: rgb(165, 165, 165);
+    }
+
+    .educationDiv h2 {
+        color: rgb(165, 165, 165);
+    }
+
+    .ed1 {
+        margin-bottom: -22px;
+        width: 94%;
+    }
+
+    .ed2 {
+        width: 94%;
+    }
+
+    .achievementDiv {
+        color: rgb(165, 165, 165);
+    }
+
+    .achievementDiv h2 {
+        color: rgb(165, 165, 165);
+    }
+
+    .achievements {
+        display: flex;
+        width: max-content;
+        /* animation: scroll 10s linear infinite; */
+    }
+
+    .achievementCard {
+        border: 1px solid #00ABF0;
+    }
+
+    .achievementTitle {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .achievementDetails {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
     }
 }
