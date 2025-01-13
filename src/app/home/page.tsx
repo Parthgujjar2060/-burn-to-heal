@@ -80,7 +80,7 @@ const Home: React.FC = () => {
         <div className="main">
             <div className="flex items-center pb-28 h-screen">
                 <div className="main-container grid grid-cols-2 gap-4 w-full ml-10">
-                    <div className=' flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
+                    <div className='flex flex-col justify-center items-center' style={{ width: '100%', height: '100%' }}>
                         <div className="name mr-60">
                             <h2 className="text-white font-thin text-2xl ">Hello, I am Parth</h2>
                         </div>
@@ -89,13 +89,11 @@ const Home: React.FC = () => {
                                 {Array.from("a Full Stack Developer").map((char, i) => (
                                     <span
                                         key={i}
-                                        className={`text-blue-500 animate-reveal delay-${i * 3} text-4xl m-3`}
                                     >{char}
                                     </span>
                                 ))}
                             </p>
                         </div>
-
                         <div>
                             <p className="paragraph w-96" style={{ width: "410px" }}>
                                 Full-Stack Developer with ability to learn and collaborate
@@ -103,14 +101,14 @@ const Home: React.FC = () => {
                             </p>
                         </div>
                         <div className="grid grid-cols-2 mt-5" style={{ gap: "140px" }}>
-                            <div className="">
+                            <div>
                                 <Link href="/contact">
-                                    <button className="bg-blue-500 p-2 rounded-lg text-white hover:opacity-50 transition duration-500 ease-in-out">Let&apos;s Talk</button>
+                                    <button className="contactButton">Let&apos;s Talk</button>
                                 </Link>
                             </div>
                             <div className="flex gap-2">
                                 {links && Object.entries(links).map(([platform, url]) => (
-                                    <div key={platform} className="">
+                                    <div key={platform}>
                                         <a href={url} target="_blank">
                                             <img src={url} alt={platform} className="w-10 h-10 hover:opacity-50 cursor-pointer transition duration-500" />
                                         </a>
@@ -123,6 +121,7 @@ const Home: React.FC = () => {
                         <div className='ring'>
                         {homeData && (
                             <div className="flex justify-center items-center">
+                                <div className="w-full h-fulloverflow-hidden">
                                 <div className="w-full h-full overflow-hidden">
                                     <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ objectFit: 'cover' }} />
                                 </div>
