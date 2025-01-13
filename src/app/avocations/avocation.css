@@ -1,13 +1,23 @@
+body,
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .grid {
-    height: 70vh;
+    max-width: 100vw;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: 45% 45% 5%;
-    gap: 4%;
+    gap: 2%;
     align-items: stretch;
 }
 
 .single-image-container {
-    position: relative;
     width: 100%;
     height: 100%;
     overflow-y: auto;
@@ -24,21 +34,29 @@
 .info-container {
     display: grid;
     gap: 10px;
-    height: 40vh;
+    height: 50vh;
+    width: max-content;
     overflow-y: auto;
     position: relative;
 }
 
 .avocation-wrapper {
-    width: fit-content;
+    display: grid;
+    width: 60vh;
+    height: 59vh;
     margin: 0 auto;
-    height: 100%;
+    display: grid;
+}
+
+.line {
+    margin-bottom: 20px;
 }
 
 .shining-line {
     display: block;
     width: 100%;
-    height: 4px;
+    margin-left: 34px;
+    height: 3px;
     background: linear-gradient(90deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
     background-size: 300% 300%;
     animation: shine 5s linear infinite;
@@ -49,7 +67,7 @@
 .scrol {
     position: relative;
     width: 2px;
-    height: 70vh;
+    height: 61vh;
     overflow: hidden;
 }
 
@@ -57,8 +75,8 @@
     position: absolute;
     width: 2px;
     height: 0;
-    background: linear-gradient(to bottom, #000 50%, transparent 100%);
-    animation: scroll-animation 1.8s linear infinite forwards;
+    background: linear-gradient(to bottom, #122bca 40%, transparent 100%);
+    animation: scroll-animation 1.3s linear infinite forwards;
 }
 
 @keyframes scroll-animation {
@@ -82,5 +100,112 @@
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+/* Extra Large screens (desktops, 1400px and above) */
+@media (min-width: 1400px) {
+    .grid {
+        grid-template-columns: 45% 45% 5%;
+    }
+
+    .avocation-image {
+        width: 70vh;
+        height: 75vh;
+    }
+
+    .info-container {
+        margin: 0 auto;
+        height: 60vh;
+        width: 80vh;
+    }
+
+
+    .shining-line {
+        width: 51vh;
+    }
+}
+
+/* Large screens (desktops, between 1200px and 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .grid {
+        grid-template-columns: 45% 45% 10%;
+        max-width: 100%;
+    }
+
+    .avocation-image {
+        width: 60vh;
+        height: 40vh;
+    }
+
+    .info-container {
+        height: 50vh;
+    }
+}
+
+/* Medium screens (tablets, between 768px and 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .grid {
+        grid-template-columns: 45% 45% 10%;
+        grid-template-rows: auto;
+        gap: 1%;
+        max-width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+        margin: 20px 30px 0 20px;
+    }
+
+    .avocation-image {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .info-container {
+        height: 59vh;
+        width: 100%;
+        margin: 0 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
+    }
+
+    .info-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .shining-line {
+        width: 69%;
+        margin-top: -20px;
+        margin-left: 3px;
+        height: 3px;
+    }
+
+    .scrol {
+        margin: 0 auto;
+        height: 58vh;
+    }
+}
+
+/* Small screens (phones, below 768px) */
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        gap: 1%;
+        max-width: 100vw;
+    }
+
+    .avocation-image {
+        margin-top: 20px;
+        width: 80%;
+        height: 35vh;
+    }
+
+    .info-container {
+        margin-top: 13px;
+        height: 350vh;
+        width: 100%;
+        margin: 0 100px 1000px auto;
+        overflow-x: hidden;
     }
 }

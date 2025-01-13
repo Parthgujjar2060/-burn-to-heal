@@ -32,13 +32,12 @@ const Avocations: React.FC = () => {
             });
     }, []);
 
-    // Function to determine which section is in view
     const handleScroll = () => {
         sectionRefs.current.forEach((section, index) => {
             if (section) {
                 const rect = section.getBoundingClientRect();
                 if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                    setActiveKey(avocationKeys[index]); // Update the active key based on scroll position
+                    setActiveKey(avocationKeys[index]);
                 }
             }
         });
@@ -46,10 +45,9 @@ const Avocations: React.FC = () => {
 
     return (
         <div>
-            <h1 style={{ fontSize: '2.5rem', marginTop: "60px" }}>Welcome to Avocations</h1>
-            <h3 style={{ fontSize: '1rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
-            <div className='grid' style={{ gridTemplateColumns: '45% 45% 5%' }}>
-                {/* Left Side: Show active image */}
+            <h1 style={{ fontSize: '2.2rem', marginTop: "60px", fontFamily:"monospace" }}>Welcome to Avocations</h1>
+            <h3 style={{ fontSize: '1.2rem', marginTop: "10px" }}>Here you will find my hobbies</h3>
+            <div className='grid' style={{ gridTemplateColumns: '45% 45% 10%' }}>
                 <div className='single-image-container'>
                     {avocationData && activeKey && avocationData[activeKey]?.image && (
                         <img
@@ -60,24 +58,28 @@ const Avocations: React.FC = () => {
                     )}
                 </div>
 
-                {/* Right Side: Scrollable descriptions */}
                 <div className='info-container' onScroll={handleScroll}>
                     {avocationData && avocationKeys.map((key, index) => (
                         <div
                             key={key}
                             className='avocation-wrapper'
-                            ref={(el) => { sectionRefs.current[index] = el; }} // Assign ref for each section
+                            ref={(el) => { sectionRefs.current[index] = el; }}
                         >
-                            <span className='shining-line'></span>
-                            <AvocationComp
-                                avocation={key}
-                                description={avocationData[key]?.description || "No description available"}
-                            />
+                            <div>
+                                <div className='line'>
+                                    <span className='shining-line'></span>
+                                </div>
+                                <div className='component'>
+                                    <AvocationComp
+                                        avocation={key}
+                                        description={avocationData[key]?.description || "No description available"}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Scroll indicator */}
                 <div className="scrol">
                     <div className="scroll-line"></div>
                 </div>

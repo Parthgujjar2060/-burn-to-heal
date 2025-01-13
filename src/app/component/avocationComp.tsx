@@ -1,4 +1,5 @@
 import React from 'react';
+import '../component/avocationComp.css';
 
 interface AvocationCompProps {
     avocation: string;
@@ -8,12 +9,14 @@ interface AvocationCompProps {
 
 const AvocationComp: React.FC<AvocationCompProps> = ({ avocation, description, icon }) => {
     return (
-        <div style={{ border: '1px solid #ddd', borderRadius: '8px', padding: '16px', maxWidth: '300px', height: '39vh' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                {icon && <div style={{ marginRight: '12px' }}>{icon}</div>}
-                <h3 style={{ margin: 0 }}>{avocation}</h3>
+        <div className='avocationBox'>
+            <div className='header'>
+                {icon && <div className="icon">{icon}</div>}
+                <h3>{avocation}</h3>
             </div>
-            {description && <p style={{ marginTop: '8px', color: '#555' }}>{description}</p>}
+            <div className='description'>
+                {description && <p>{description}</p>}
+            </div>
         </div>
     );
 };
