@@ -1,0 +1,364 @@
+<<<<<<< HEAD
+=======
+body {
+    margin: 0 auto !important;
+    height: max-content;
+    background-color: #081B29;
+}
+
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01204b;
+}
+
+.contactButton {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contactButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 30%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+  }
+  
+  .contactButton:hover::before {
+    animation: waterRipple 1.2s infinite ease-out;
+  }
+  
+  @keyframes waterRipple {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  }
+  
+.logo {
+    position: absolute;
+    opacity: 0.4;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.animate-reveal {
+    animation: reveal 3s infinite;
+}
+
+@media (min-width: 1400px) {
+@media (max-width: 953px) {
+    .devimage {
+        display: none;
+    }
+  homepage
+    .name {
+
+    .homepage .name {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .homepage .tagline {
+        width: max-content;
+        margin: 0 auto;
+    }
+  
+    .parthimage {
+        width: 70%;
+
+    .parthimage {
+        width: 50%;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .parthimage {
+        width: 80%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: grid;
+        gap: 50px;
+        
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .devimage {
+        display: none;
+    }
+    .body {
+    .homepage .body {
+        height: 100vh;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+        margin-top: 30px;
+        margin-right: 0;
+        margin-left: 85px;
+        height: max-content;
+    }
+
+    .name {
+        width: 30%;
+        margin: 0 auto 20px auto;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto 10px auto;
+        grid-row-gap: 100px;
+        margin-top: -100px;
+        margin-right: 0px;
+        margin-left: 85px;
+    }
+
+    .main-container> :first-child {
+        order: 2;
+    }
+
+    .main-container> :last-child {
+        grid-row: 1;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .parthimage {
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+    }
+
+    .devimage-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .devimage {
+        display: none;
+    }
+
+    .main{
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+        margin-top: -40px;
+        margin-right: 0px;
+        margin-left: 85px;
+        height: max-content;
+    }
+
+    .name {
+        width: max-content;
+        margin: 0 auto 20px auto;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto 20px auto;
+        grid-row-gap: 100px;
+        margin: 0 auto 20px auto;
+    }
+
+    .main-container> :first-child {
+        order: 2;
+    }
+
+    .main-container> :last-child {
+        grid-row: 1;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .parthimage {
+        width: 65%;
+        height: 50%;
+        border-radius: 50%;
+        margin: 0 auto;
+        border: 4px solid #00ABF0;
+    }
+
+    .devimage-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .devimage {
+        display: none;
+    }
+   
+    .body {
+        height: 100vh;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+        margin-top: 30px;
+        margin-right: 0px;
+        margin-left: 85px;
+    }
+
+    .name {
+        width: max-content;
+        margin: 0 auto 20px auto;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto 10px auto;
+        grid-row-gap: 100px;
+        margin: 0 auto;
+    }
+
+    .paragraph{
+        width: max-content;
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    .main-container> :first-child {
+        order: 2;
+    }
+
+    .main-container> :last-child {
+        grid-row: 1;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .parthimage {
+        width: 50%;
+
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #00ABF0;
+    }
+
+    .devimage-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .devimage {
+        display: none;
+    }
+
+    .main {
+        height: 100vh;
+    }
+
+    .main-container {
+        grid-row-gap: 80px;
+        width: 100%;
+        margin: 0 auto 0 50px;
+    }
+
+    .main-container> :first-child {
+        order: 2;
+    }
+
+    .main-container> :last-child {
+        grid-row: 1;
+    }
+
+    .name {
+        width: 40%;
+        margin: 10px auto;
+    }
+
+    .tagline {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .parthimage {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #00b7ff;
+    }
+
+    .devimage-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+>>>>>>> a9fdafa30e9f4f1a027921fc3b31cb5c8f556f06
