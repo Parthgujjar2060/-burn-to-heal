@@ -1,0 +1,21 @@
+# Use a Node.js version that is compatible with Next.js
+FROM node:18-alpine
+
+# Create the application directory
+RUN mkdir -p /usr/app
+WORKDIR /usr/app
+
+# Copy package files and install dependencies
+COPY package.json package-lock.json ./
+
+# Set up the build-time argument and environment variable
+ARG FIREBASE_API_KEY
+ENV FIREBASE_API_KEY=${AIzaSyB6BfT7787CmwGPk2665ZNIuXXgNeA9Wt0}
+
+# Install dependencies and build the app
+RUN npm install
+RUN npm run build
+
+# Expose the port and start the application
+EXPOSE 3000
+CMD ["npm", "start"]

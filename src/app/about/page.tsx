@@ -92,11 +92,11 @@ const About = () => {
     }, []);
 
     return (
-        <div className="about-container">
+        <div className="about-container font-mono">
             {data && (
                 <div className="about-content">
                     <div className="flex-container">
-                        <div className="border">
+                        <div className="paragraph">
                             <p>{data.paragraph}</p>
                         </div>
                     </div>
@@ -174,6 +174,44 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="background mt-10 gap-20">
+                        <div>
+                            <h2 className="font-mono">Education</h2>
+                            <div className="educationDiv font-mono">
+                                <div className='ed1'>
+                                    <p># Post Graduation Diploma (2024) GPA - 3.7 Computer Programming</p>
+                                    <p>Conestoga College Waterloo, Ontario</p>
+                                </div>
+                                <div className='ed2'>
+                                    <p># Post Graduation Diploma (2020 - 2021) PR - 80%
+                                        Math & Computer</p>
+                                    <p>Gattu Vidhyalaya, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="achievementDiv font-mono overflow-hidden">
+                        <h2>Achievements</h2>
+                        <div className="achievements">
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Hackathon at Gujarat Institute of Engineering</span>
+                                <span className="achievementDetails">- Participated and won 2nd place in a state-level hackathon, developing an innovative solution for smart traffic management using AI and IoT.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Participated in Drone Competition of Lions International School</span>
+                                <span className="achievementDetails">- Designed and built a custom drone from scratch, showcasing advanced flight maneuvers and securing a spot in the top 5 teams.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Hackathon for Junior Category at Early Age</span>
+                                <span className="achievementDetails">- Engaged in early coding camps, where I led a team to develop a simple but effective web application, earning recognition for teamwork and innovation.</span>
+                            </div>
+                            <div className="achievementCard">
+                                <span className="achievementTitle">Achieved Team Leading Award in Gujarat, India</span>
+                                <span className="achievementDetails">- Recognized for exemplary leadership in a regional competition, coordinating a team of 10 members to complete a project ahead of schedule with excellent results.</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             )}
         </div>

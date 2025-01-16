@@ -121,6 +121,7 @@ const Home: React.FC = () => {
                         {homeData && (
                             <div className="flex justify-center items-center">
                                 <div className="w-full h-fulloverflow-hidden">
+                                <div className="w-full h-full overflow-hidden">
                                     <img className="parthimage" src={homeData.image} alt="Name is empty" style={{ objectFit: 'cover' }} />
                                 </div>
                             </div>
